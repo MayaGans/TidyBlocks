@@ -1,0 +1,54 @@
+html, body {
+ height: 100%;
+ margin: 0;
+}
+
+body {
+	background-color: #fff;
+	font-family: sans-serif;
+	overflow: hidden;
+}
+    
+h1 {
+	font-weight: normal;
+	font-size: 140%;
+}
+    
+table {	
+	height: 100%;
+	width: 100%;
+}
+    
+#blocklyArea {
+	height: 90%;
+    width:60%
+}
+    
+#blockOutputArea {
+    height: 45%
+    width: 40%
+     
+}
+    
+#dataTableOutPut{
+    height: 45%
+    width: 40%
+}
+    
+#output{
+	background-color: #0070C0
+}
+    
+ #df{
+	background-color: #6ED9ED
+}
+
+button {
+  background-image: url(../media/run.jpg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  /* put the height and width of your image here */
+  height:50px;
+  width: 50px;
+  border: none;
+}

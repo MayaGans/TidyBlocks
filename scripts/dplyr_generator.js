@@ -1,0 +1,96 @@
+goog.provide('Blockly.Blocks.texts');  // Deprecated
+goog.provide('Blockly.Constants.Text');
+goog.require('Blockly.Blocks');
+goog.require('Blockly');
+
+
+// this only works for numeric columns, not text 
+// can't filter Col2 == hello
+Blockly.JavaScript['dplyr_filter'] = function(block) {
+  
+  // Comparison operator.
+  var OPERATORS = {
+    'EQ': '==',
+    'NEQ': '!=',
+    'LT': '<',
+    'LTE': '<=',
+    'GT': '>',
+    'GTE': '>='
+  };
+  
+  var operator = OPERATORS[block.getFieldValue('OP')];
+  var order = (operator == '==' || operator == '!=') ?
+      Blockly.JavaScript.ORDER_EQUALITY : Blockly.JavaScript.ORDER_RELATIONAL;  
+  var argument0 = Blockly.JavaScript.valueToCode(block, 'Columns',
+      Blockly.JavaScript.ORDER_NONE);
+  var argument1 = Blockly.JavaScript.valueToCode(block, 'B', order) || '0';
+  var filteredString = `.where(row => (row.${argument0}  ${operator}  ${argument1}))`
+	filteredString = filteredString.replace(/["']/g, "")
+ 
+ return filteredString
+};
+
+
+
+Blockly.JavaScript['dplyr_groupby'] = function(block) {
+
+
+   var argument0 = Blockly.JavaScript.valueToCode(block, 'Column',
+      Blockly.JavaScript.ORDER_NONE);
+   var groupbyString = `.groupBy(row => (row.${argument0}))`
+    
+    groupbyString = groupbyString.replace(/["']/g, "")
+    
+  return groupbyString
+};
+
+
+// we can only select a single column 
+Blockly.JavaScript['dplyr_select'] = function(block) {
+
+
+   var argument0 = Blockly.JavaScript.valueToCode(block, 'Column',
+      Blockly.JavaScript.ORDER_NONE);
+      console.log(argument0)
+   var selectString = ".subset([" + argument0 + "])"
+  return selectString
+};
+
+
+
+Blockly.JavaScript['dplyr_mutate'] = function(block) {
+  
+  // Comparison operator.
+  var OPERATORS = {
+    'ADD': '+',
+    'SUBTRACT': '-',
+    'MULTIPLY': '*',
+    'DIVIDE': '/',
+  };
+  
+  var operator = OPERATORS[block.getFieldValue('OP')];
+  var order = (operator == '==' || operator == '!=') ?
+      Blockly.JavaScript.ORDER_EQUALITY : Blockly.JavaScript.ORDER_RELATIONAL;  
+      
+  var argument0 = Blockly.JavaScript.valueToCode(block, 'colName',
+      Blockly.JavaScript.ORDER_NONE);
+  
+  var argument1 = Blockly.JavaScript.valueToCode(block, 'Column', order) || '0';
+  
+  // TO DO 
+  var argument2 = Blockly.JavaScript.valueToCode(block, 'Value', order) || '0';
+  // if get type is numeric return block as argument
+  // otherwise return argument0.argument1
+  // if (Blockly.JavaScript.valueToCode(block, 'Column', order) || '0' == ) {
+  //  block of code to be executed if the condition is true
+  //	} else { 
+  //  block of code to be executed if the condition is false
+  // }
+
+
+  var mutateString = `.generateSeries({ ${argument0}: row => row.${argument1} ${operator} ${argument2}})`
+
+	mutateString = mutateString.replace(/["']/g, "")
+ console.log(mutateString)
+ return mutateString
+};
