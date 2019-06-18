@@ -18,29 +18,31 @@ table {
 	height: 100%;
 	width: 100%;
 }
-    
+
+th {
+ font-family: "Courier New"
+ display:table-header-group;
+}
+
+td {
+ font-family: "Courier New"
+}
+
 #blocklyArea {
-	height: 90%;
-    width:60%
+	height: 100%;
+    width: 40%
 }
     
 #blockOutputArea {
     height: 45%
-    width: 40%
+    width: 60%
      
 }
     
 #dataTableOutPut{
     height: 45%
-    width: 40%
-}
-    
-#output{
-	background-color: #0070C0
-}
-    
- #df{
-	background-color: #6ED9ED
+    width: 60%
+    display:table-header-group;
 }
 
 button {
@@ -52,3 +54,4 @@ button {
   width: 50px;
   border: none;
 }
+
