@@ -158,7 +158,9 @@
       // run code and show in field
       Blockly.JavaScript.INFINITE_LOOP_TRAP = null;
       var code = Blockly.JavaScript.workspaceToCode(demoWorkspace);
-      document.getElementById("dataTableOutPut").innerHTML = eval(code);
+      document.getElementById("dataTableOutPut").innerHTML = eval(code)
+      dfArray = eval(code).toArray()
+      console.log(dfArray);
     }
     
 

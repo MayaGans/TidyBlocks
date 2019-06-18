@@ -26,7 +26,6 @@ Blockly.JavaScript['dplyr_filter'] = function(block) {
   var argument1 = Blockly.JavaScript.valueToCode(block, 'B', order) || '0';
   var filteredString = `.where(row => (row.${argument0}  ${operator}  ${argument1}))`
 	filteredString = filteredString.replace(/["']/g, "")
- 
  return filteredString
 };
 
