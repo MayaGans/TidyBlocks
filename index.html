@@ -153,14 +153,52 @@
     onresize();
     Blockly.svgResize(demoWorkspace);
     
+    function json2table(json, classes) {
+ // one table column per property 
+ // we know each object has the same properties
+ 
+ // get key names and set as column headers
+  var cols = Object.keys(json[0]);
+ 
+  var headerRow = '';
+  var bodyRows = '';
+  
+  // contains empty string if no class is passed
+  classes = classes || '';
+  
+  // create column headers from col
+  // a string of th elements
+  cols.map(function(col) {
+  	headerRow += '<th>' + col + '</th>';
+  });
+  
+  // build the rows
+  json.map(function(row) {
+  
+  	bodyRows += '<tr>';
+  	
+  	 // loop over object properties and create cells 
+ 	 cols.map(function(colName) {
+  		bodyRows +=  `<td> ${row[colName]} <td>`
+  	});
+  
+  	bodyRows += '</tr>';
+	});
+  
+  
+  
+return `<table class= ${classes} ></thead><tr> ${headerRow} </tr></thead><tbody> ${bodyRows} </tbody></table>`
+  
+}
+    
     
     function showCode() {
       // run code and show in field
       Blockly.JavaScript.INFINITE_LOOP_TRAP = null;
       var code = Blockly.JavaScript.workspaceToCode(demoWorkspace);
-      document.getElementById("dataTableOutPut").innerHTML = eval(code)
       dfArray = eval(code).toArray()
-      console.log(dfArray);
+      document.getElementById('dataTableOutPut').innerHTML = json2table(dfArray);
+      
     }
     
 
