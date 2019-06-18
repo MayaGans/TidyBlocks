@@ -33,26 +33,22 @@ Blockly.JavaScript['dplyr_filter'] = function(block) {
 
 
 Blockly.JavaScript['dplyr_groupby'] = function(block) {
-
-
-   var argument0 = Blockly.JavaScript.valueToCode(block, 'Column',
-      Blockly.JavaScript.ORDER_NONE);
-   var groupbyString = `.groupBy(row => (row.${argument0}))`
-    
-    groupbyString = groupbyString.replace(/["']/g, "")
-    
+  
+  var argument0 = block.getFieldValue('Column')
+   console.log(argument0)
+    var groupbyString = `.groupBy(row => (row.${argument0}))`
+	 groupbyString = groupbyString.replace(/["']/g, "")
+	 console.log(groupbyString)
   return groupbyString
 };
 
 
 // we can only select a single column 
 Blockly.JavaScript['dplyr_select'] = function(block) {
-
-
-   var argument0 = Blockly.JavaScript.valueToCode(block, 'Column',
-      Blockly.JavaScript.ORDER_NONE);
+   var argument0 = block.getFieldValue('Column')
       console.log(argument0)
-   var selectString = ".subset([" + argument0 + "])"
+   var selectString = ".subset([ \" " + argument0 + " \"])"
+   console.log(selectString)
   return selectString
 };
 

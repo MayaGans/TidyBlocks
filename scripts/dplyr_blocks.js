@@ -5,31 +5,35 @@ goog.require('Blockly.Blocks');
 goog.require('Blockly');
 
 
-Blockly.defineBlocksWithJsonArray([
+Blockly.Blocks['dplyr_groupby'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField("GROUP BY");
+    this.appendDummyInput()
+        .appendField(new Blockly.FieldTextInput("columnName"), "Column");
+    this.setInputsInline(true);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setStyle('dplyr_blocks')
+ this.setTooltip("");
+ this.setHelpUrl("");
+  }
+};
 
-{
-  "type": "dplyr_groupby",
-  "message0": "GROUP BY %1 %2",
-  "args0": [
-    {
-      "type": "input_dummy"
-    },
-    {
-      "type": "input_value",
-      "name": "Column",
-      "check": "String"
-    }
-  ],
-  "inputsInline": true,
-  "previousStatement": null,
-  "nextStatement": null,
-  "tooltip": "",
-  "helpUrl": "",
-  "style": "dplyr_blocks"
-}
-
-  
-]);
+Blockly.Blocks['dplyr_select'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField("SELECT");
+    this.appendDummyInput()
+        .appendField(new Blockly.FieldTextInput("columnName"), "Column");
+    this.setInputsInline(true);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setStyle('dplyr_blocks')
+ this.setTooltip("");
+ this.setHelpUrl("");
+  }
+};
 
 Blockly.Blocks['dplyr_filter'] = {
 
@@ -52,22 +56,6 @@ Blockly.Blocks['dplyr_filter'] = {
  }
   
 };
-
-Blockly.Blocks['dplyr_select'] = {
-  init: function() {
-    this.appendDummyInput()
-        .appendField("SELECT");
-    this.appendValueInput("Column")
-        .setCheck("String");
-    this.setInputsInline(true);
-    this.setPreviousStatement(true, null);
-    this.setNextStatement(true, null);
-    this.setStyle('dplyr_blocks');
- this.setTooltip("");
- this.setHelpUrl("");
-  }
-};
-
 
 Blockly.Blocks['dplyr_mutate'] = {
   init: function() {
