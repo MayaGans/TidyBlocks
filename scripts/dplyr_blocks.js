@@ -78,7 +78,7 @@ Blockly.Blocks['dplyr_mutate'] = {
         .appendField(new Blockly.FieldTextInput("newColName"), "colName");
     this.appendValueInput("Value")
         .setCheck(null)
-        .appendField(new Blockly.FieldDropdown([["+","ADD"], ["-","SUBTRACT"], ["option","MULTIPLY"], ["option","DIVIDE"], ["option","POWER"]]), "OP");
+        .appendField(new Blockly.FieldDropdown([["+","ADD"], ["-","SUBTRACT"], ["\u00D7","MULTIPLY"], ["\u00F7","DIVIDE"]]), "OP");
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);

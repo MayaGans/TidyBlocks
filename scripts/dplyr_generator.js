@@ -70,27 +70,29 @@ Blockly.JavaScript['dplyr_mutate'] = function(block) {
   
   var operator = OPERATORS[block.getFieldValue('OP')];
   var order = (operator == '==' || operator == '!=') ?
-      Blockly.JavaScript.ORDER_EQUALITY : Blockly.JavaScript.ORDER_RELATIONAL;  
+      Blockly.JavaScript.ORDER_EQUALITY : Blockly.JavaScript.ORDER_RELATIONAL;
       
-  var argument0 = Blockly.JavaScript.valueToCode(block, 'colName',
-      Blockly.JavaScript.ORDER_NONE);
-  
-  var argument1 = Blockly.JavaScript.valueToCode(block, 'Column', order) || '0';
-  
-  // TO DO 
-  var argument2 = Blockly.JavaScript.valueToCode(block, 'Value', order) || '0';
-  // if get type is numeric return block as argument
-  // otherwise return argument0.argument1
-  // if (Blockly.JavaScript.valueToCode(block, 'Column', order) || '0' == ) {
-  //  block of code to be executed if the condition is true
-  //	} else { 
-  //  block of code to be executed if the condition is false
-  // }
+  var argument0 = block.getFieldValue('colName');
+  console.log(argument0)
 
+  
+  var argument1 = Blockly.JavaScript.valueToCode(block, 'Column', Blockly.JavaScript.ORDER_NONE);
+  
+
+  var argument2 = Blockly.JavaScript.valueToCode(block, 'Value', Blockly.JavaScript.ORDER_NONE);
+  
+  // extract if the input block is a string (column)
+  // or number
+  // this can probably be made more elegant?
+  if (this.getInput('Value').connection.dbOpposite_.connections_[0].check_[0] === "String") {
+	argument2 = `row.` + argument2
+  } else {
+  	argument2 = argument2
+  }
 
   var mutateString = `.generateSeries({ ${argument0}: row => row.${argument1} ${operator} ${argument2}})`
-
-	mutateString = mutateString.replace(/["']/g, "")
+  mutateString = mutateString.replace(/["']/g, "")
+  
  console.log(mutateString)
  return mutateString
 };
