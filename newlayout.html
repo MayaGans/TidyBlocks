@@ -1,30 +1,132 @@
-<!DOCTYPE html>
 <html>
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   
-  <link rel="stylesheet" type="text/css" href="styles/index.css">.
+   <script language="javascript" type="text/javascript" src="node_modules/data-forge/dist/web/index.js"></script>
   
-    <script language="javascript" type="text/javascript" src="node_modules/data-forge/dist/web/index.js"></script>
+  <style>
+  
+html, body {
+ height: 100%;
+ margin: 0;
+}
 
+body {
+	background-color: #fff;
+	font-family: sans-serif;
+	overflow: hidden;
+}
+
+div{
+  color:#fff;
+  font-size:40px;
+}
+
+.two {
+  width:40%;
+  height:90%;
+}
+
+.three{
+    width:50%;
+  height:100%;
+}
+
+.four{
+  width:100%;
+  height:50%;
+  background:darkblue;
+}
+
+.five{
+  width:100%;
+  height:50%;
+  overflow-y: scroll;
+  overflow-x: scroll;
+}
+
+.dataTableOutput tbody {
+  display: block;
+  overflow-y: scroll;
+  overflow-x: scroll;
+}
+
+.dataTableOutput thead tr {
+  height: 20px;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+.table tr {
+  background-color: white;
+  border: 1px solid black;
+  padding: .35em;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+table th {
+  background-color: #F7F9FA;
+  color: black;
+  padding: .425em;
+  text-align: center;
+}
+
+table td {
+  padding: .425em;
+  text-align: left;
+  word-wrap: break-word;
+  font-size: 0.75em;
+  border: 1px solid #D7DADC;
+}
+
+table th {
+  font-size: .75em;
+  letter-spacing: .1em;
+  text-align: left;
+  border: 1px solid #D7DADC;
+}
+
+tr {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+  border: 1px solid #D7DADC;
+}
+
+#blocklyArea {
+  width:50%;
+  height:100%;
+}
+
+button {
+  background-image: url(media/run.jpg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  /* put the height and width of your image here */
+  height:50px;
+  width: 50px;
+  border: none;
+}
+</style>
+  
 </head>
 
 <body>
 
-<button onclick="showCode()"> </button>
+<div id="blocklyArea">
+</div>
 
-<table>
-    <tr id="output">
-    <th id="blocklyArea" rowspan="2"></th>
-    <td id="blockOutputArea">Charts will go here</td>    
-  </tr>
-  <tr id="df">
-    <td id="dataTableOutPut">This is where the DF will go</td>
-  </tr>
-</table>
+<div class="three">
+<div class="four"><button onclick="showCode()"></button></div>
+<div class="five" id="dataTableOutput"></div>
+</div>
 
-  <div id="blocklyDiv" style="position: absolute"></div>
+
+<div id="blocklyDiv" style="position: absolute"></div>
 
 <xml id="toolbox" style="display: none">
 
@@ -72,35 +174,10 @@
   	<block type="variable_number"></block>
   </category>
 </xml>
-  
-    <xml id="startBlocks">
-    <block type="data_iris">
-    <next>
-    
-     <block type="dplyr_filter">
-        
-        <value name="Columns">
-         	<block type ="variable_text">
-         		<field name="TEXT">Sepal_Length</field>
-         	</block>
-         </value>
-         
-          <field name="OP">GTE</field>
-          
-          <value name="B">
-            <block type="variable_number">
-              <field name="NUM">5</field>
-            </block>
-        </value>
-        
-     </block>
-    
-    </next>
-    </block>
-    
-  </xml>
-  
-  <script src="blockly_compressed.js"></script>
+
+
+
+<script src="blockly_compressed.js"></script>
   <script src="blocks_compressed.js"></script>
   <script src="javascript_compressed.js"></script>
   <script src="scripts/sound_blocks.js"></script>
@@ -113,22 +190,20 @@
     <script src="scripts/variable_blocks.js"></script>
   <script src="scripts/variable_generator.js"></script>
   
-    <script src="styles/block_themes.js"></script>
-  
+<script src="styles/block_themes.js"></script>
+    
+    
 <script>
 
-
-    var blocklyArea = document.getElementById('blocklyArea');
+	var blocklyArea = document.getElementById('blocklyArea');
     var blocklyDiv = document.getElementById('blocklyDiv');
-    var demoWorkspace = Blockly.inject(blocklyDiv,
+
+ 	var demoWorkspace = Blockly.inject(blocklyDiv,
         {media: 'media/',
          toolbox: document.getElementById('toolbox'), horizontalLayout: false, scrollbars: false, 
          theme: Blockly.Themes.Tidy});
     
-    //add code to have default block
-        Blockly.Xml.domToWorkspace(document.getElementById('startBlocks'),
-                demoWorkspace);
-                
+    
     var onresize = function(e) {
       // Compute the absolute coordinates and dimensions of blocklyArea.
       var element = blocklyArea;
@@ -150,7 +225,8 @@
     onresize();
     Blockly.svgResize(demoWorkspace);
     
-    function json2table(json, classes) {
+    
+function json2table(json, classes) {
  // one table column per property 
  // we know each object has the same properties
  
@@ -159,9 +235,6 @@
  
   var headerRow = '';
   var bodyRows = '';
-  
-  // contains empty string if no class is passed
-  classes = classes || '';
   
   // create column headers from col
   // a string of th elements
@@ -176,7 +249,7 @@
   	
   	 // loop over object properties and create cells 
  	 cols.map(function(colName) {
-  		bodyRows +=  `<td> ${row[colName]} <td>`
+  		bodyRows +=  `<td> ${row[colName]} </td>`
   	});
   
   	bodyRows += '</tr>';
@@ -184,10 +257,9 @@
   
   
   
-return `<table class= ${classes} ></thead><tr> ${headerRow} </tr></thead><tbody> ${bodyRows} </tbody></table>`
+return `<table class=\"dataTableOutput\"></thead><tr> ${headerRow} </tr></thead><tbody> ${bodyRows} </tbody></table>`
   
 }
-    
     
     function showCode() {
       // run code and show in field

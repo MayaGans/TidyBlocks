@@ -20,12 +20,12 @@ table {
 }
 
 th {
- font-family: "Courier New"
+ font-family: "Lucida Console"
  display:table-header-group;
 }
 
 td {
- font-family: "Courier New"
+ font-family: "Lucida Console"
 }
 
 #blocklyArea {
