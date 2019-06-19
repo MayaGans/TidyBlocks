@@ -24,8 +24,17 @@ Blockly.JavaScript['dplyr_filter'] = function(block) {
   var argument0 = Blockly.JavaScript.valueToCode(block, 'Columns',
       Blockly.JavaScript.ORDER_NONE);
   var argument1 = Blockly.JavaScript.valueToCode(block, 'B', order) || '0';
-  var filteredString = `.where(row => (row.${argument0}  ${operator}  ${argument1}))`
+  var filteredString = []
+  
+  if (isNaN(argument1)) {
+	filteredString = `.where(row => row.${argument0}  ${operator}=  ${argument1})`
+	filteredString = filteredString.replace(/["']/, "")
+	filteredString = filteredString.replace(/["']/, "")
+  } else {
+  	var filteredString = `.where(row => (row.${argument0}  ${operator}  ${argument1}))`
 	filteredString = filteredString.replace(/["']/g, "")
+  }
+  console.log(filteredString)
  return filteredString
 };
 
