@@ -55,7 +55,7 @@ Blockly.JavaScript['dplyr_groupby'] = function(block) {
 Blockly.JavaScript['dplyr_select'] = function(block) {
    var argument0 = block.getFieldValue('Column')
       console.log(argument0)
-   var selectString = ".subset([ \" " + argument0 + " \"])"
+   var selectString = ".subset([ \"" + argument0 + "\"])"
    console.log(selectString)
   return selectString
 };
