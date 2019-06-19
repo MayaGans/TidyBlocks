@@ -68,8 +68,6 @@ Blockly.JavaScript['dplyr_mutate'] = function(block) {
       Blockly.JavaScript.ORDER_EQUALITY : Blockly.JavaScript.ORDER_RELATIONAL;
       
   var argument0 = block.getFieldValue('colName');
-  console.log(argument0)
-
   
   var argument1 = Blockly.JavaScript.valueToCode(block, 'Column', Blockly.JavaScript.ORDER_NONE);
   
@@ -79,7 +77,7 @@ Blockly.JavaScript['dplyr_mutate'] = function(block) {
   // extract if the input block is a string (column)
   // or number
   // this can probably be made more elegant?
-  if (this.getInput('Value').connection.dbOpposite_.connections_[0].check_[0] === "String") {
+  if (isNaN(argument2)) {
 	argument2 = `row.` + argument2
   } else {
   	argument2 = argument2
