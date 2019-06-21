@@ -107,7 +107,10 @@ Blockly.JavaScript['dplyr_summarise'] = function(block) {
   var summariseString = []
   console.log(argument0)
   if (argument0 === "MEAN") {
-  	summariseString = `.select(group => ({ Average: group.select(row => row.${argument1}).average() }))`
+  	summariseString = `.select(group => { return { Species: group.first().Species,
+  										 Average: group.deflate(row => row.${argument1}).average()
+  										 }
+  										}).inflate()`
   } else {
   summariseString = `.select(group => SD: group.select(row => row.${argument1}).sum() )`
   }
