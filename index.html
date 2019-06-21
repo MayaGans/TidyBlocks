@@ -62,10 +62,13 @@ body {
 .myTable thead tr {
   height: 20px;
   top: 0;
+  overflow-y: scroll;
+  overflow-x: scroll;
 }
 
 table {
   border-collapse: collapse;
+  width:100%;
 }
 
 .table tr {
@@ -101,6 +104,7 @@ tr {
   width: 100%;
   table-layout: fixed;
   border: 1px solid #D7DADC;
+  white-space:nowrap
 }
 
 button {
@@ -165,6 +169,8 @@ button {
          	</block>
          </value>
     </block>
+    
+    <block type="dplyr_summarise"></block>
     
   </category>
   
@@ -308,14 +314,54 @@ return `<table class=\"myTable\"></thead><tr> ${headerRow} </tr></thead><tbody> 
 			{
 				Col1: 1,
 				Col2: 'hello',
+				Col3: 'hello',
+				Col4: 'hello',
+				Col5: 'hello',
+				Col6: 'hello',
+				Col7: 'hello',
+				Col8: 'hello',
+				Col9: 'hello',
+				Col10: 'hello',
+				Col11: 'hello',		
+				Col12: 'hello',
+				Col13: 'hello',
+				Col14: 'hello',
+				Col15: 'hello',		
+		
 			},
 			{
 				Col1: 5,
 				Col2: 'computer',
+				Col3: 'thisisalongstring',
+				Col4: 'hello',
+				Col5: 'hello',
+				Col6: 'hello',
+				Col7: 'hello',
+				Col8: 'hello',
+				Col9: 'hello',
+				Col10: 'hello',
+				Col11: 'hello',	
+				Col12: 'hello',
+				Col13: 'hello',
+				Col14: 'hello',
+				Col15: 'hello',			
 			},
 			{
 				Col1: 10,
 				Col2: 'good day',
+				Col3: 'hello',
+				Col4: 'hello',
+				Col5: 'hello',
+				Col6: 'hello',
+				Col7: 'hello',
+				Col8: 'hello',
+				Col9: 'hello',
+				Col10: 'hello',
+				Col11: 'hello',	
+				Col12: 'hello',
+				Col13: 'hello',
+				Col14: 'hello',
+				Col15: 'hello',	
 			}
 	]);
 	

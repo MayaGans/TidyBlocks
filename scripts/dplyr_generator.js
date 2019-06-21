@@ -98,3 +98,23 @@ Blockly.JavaScript['dplyr_mutate'] = function(block) {
  console.log(mutateString)
  return mutateString
 };
+
+Blockly.JavaScript['dplyr_summarise'] = function(block) {
+
+      
+  var argument0 = block.getFieldValue('transformation');
+  var argument1 = block.getFieldValue('colName')
+  var summariseString = []
+  console.log(argument0)
+  if (argument0 === "MEAN") {
+  	summariseString = `.select(group => ({ Average: group.select(row => row.${argument1}).average() }))`
+  } else {
+  summariseString = `.select(group => SD: group.select(row => row.${argument1}).sum() )`
+  }
+  
+  summariseString = summariseString.replace(/["']/g, "")
+  console.log(summariseString)
+  return summariseString
+  
+};
+

@@ -75,3 +75,20 @@ Blockly.Blocks['dplyr_mutate'] = {
  this.setHelpUrl("");
   }
 };
+
+Blockly.Blocks['dplyr_summarise'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField("SUMMARISE");
+    this.appendDummyInput()
+        .appendField(new Blockly.FieldDropdown([["mean","MEAN"], ["sd","SD"]]), "transformation");
+    this.appendDummyInput()
+        .appendField(new Blockly.FieldTextInput("columnName"), "colName");
+    this.setInputsInline(true);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setStyle('dplyr_blocks')
+ this.setTooltip("");
+ this.setHelpUrl("");
+  }
+};
