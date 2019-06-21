@@ -99,20 +99,27 @@ Blockly.JavaScript['dplyr_mutate'] = function(block) {
  return mutateString
 };
 
+  
 Blockly.JavaScript['dplyr_summarise'] = function(block) {
+
+  var argumentGroup = block.getParent().inputList[1].fieldRow[0].text_ 
+  console.log(argumentGroup)
 
       
   var argument0 = block.getFieldValue('transformation');
   var argument1 = block.getFieldValue('colName')
   var summariseString = []
-  console.log(argument0)
+
   if (argument0 === "MEAN") {
-  	summariseString = `.select(group => { return { Species: group.first().Species,
+  	summariseString = `.select(group => { return { ${argumentGroup}: group.first().${argumentGroup},
   										 Average: group.deflate(row => row.${argument1}).average()
   										 }
   										}).inflate()`
   } else {
-  summariseString = `.select(group => SD: group.select(row => row.${argument1}).sum() )`
+    	summariseString = `.select(group => { return { ${argumentGroup}: group.first().${argumentGroup},
+  										 Sum: group.deflate(row => row.${argument1}).sum()
+  										 }
+  										}).inflate()`
   }
   
   summariseString = summariseString.replace(/["']/g, "")
@@ -120,4 +127,3 @@ Blockly.JavaScript['dplyr_summarise'] = function(block) {
   return summariseString
   
 };
-
