@@ -125,12 +125,22 @@ Blockly.JavaScript['dplyr_summarise'] = function(block) {
   										 SD: group.deflate(row => row.${argument1}).std()
   										 }
   										}).inflate()`
-  } else {
+  } else if (argument0 == "MEDIAN"){
   	summariseString = `.select(group => { return { ${argumentGroup}: group.first().${argumentGroup},
-  										 SD: group.deflate(row => row.${argument1}).median()
+  										 Median: group.deflate(row => row.${argument1}).median()
   										 }
   										}).inflate()`
-  }
+  } else if (argument0 == "MIN"){
+    	summariseString = `.select(group => { return { ${argumentGroup}: group.first().${argumentGroup},
+  										 Min: group.deflate(row => row.${argument1}).min()
+  										 }
+  										}).inflate()`
+  } else {
+    	summariseString = `.select(group => { return { ${argumentGroup}: group.first().${argumentGroup},
+  										 Max: group.deflate(row => row.${argument1}).max()
+  										 }
+  										}).inflate()`
+  } 
   
   summariseString = summariseString.replace(/["']/g, "")
   console.log(summariseString)

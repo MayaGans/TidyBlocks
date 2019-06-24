@@ -81,7 +81,7 @@ Blockly.Blocks['dplyr_summarise'] = {
     this.appendDummyInput()
         .appendField("SUMMARISE");
     this.appendDummyInput()
-        .appendField(new Blockly.FieldDropdown([["mean","MEAN"], ["sum","SUM"], ["sd", "SD"], ["median", "MEDIAN"]]), "transformation");
+        .appendField(new Blockly.FieldDropdown([["mean","MEAN"], ["sum","SUM"], ["sd", "SD"], ["median", "MEDIAN"], ["min", "MIN"], ["max", "MAX"]]), "transformation");
     this.appendDummyInput()
         .appendField(new Blockly.FieldTextInput("columnName"), "colName");
     this.setInputsInline(true);
