@@ -41,9 +41,6 @@ Blockly.Blocks['dplyr_filter'] = {
     this.appendDummyInput()
         .appendField("FILTER")
         this.appendValueInput("Columns")
-    this.appendDummyInput()
-        .appendField(new Blockly.FieldDropdown([["=","EQ"], ["\u2260","NEQ"], ["\u200F<","LT"], ["\u200F\u2264","LTE"], ["\u200F>","GT"], ["\u200F\u2265","GTE"]]), "OP");
-    this.appendValueInput("B")
         .setCheck(null);
     this.setInputsInline(true);
     this.setPreviousStatement(true, "Array");
@@ -92,3 +89,4 @@ Blockly.Blocks['dplyr_summarise'] = {
  this.setHelpUrl("");
   }
 };
+

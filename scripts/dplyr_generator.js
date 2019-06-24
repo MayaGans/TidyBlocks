@@ -8,32 +8,11 @@ goog.require('Blockly');
 // can't filter Col2 == hello
 Blockly.JavaScript['dplyr_filter'] = function(block) {
   
-  // Comparison operator.
-  var OPERATORS = {
-    'EQ': '==',
-    'NEQ': '!=',
-    'LT': '<',
-    'LTE': '<=',
-    'GT': '>',
-    'GTE': '>='
-  };
-  
-  var operator = OPERATORS[block.getFieldValue('OP')];
-  var order = (operator == '==' || operator == '!=') ?
-      Blockly.JavaScript.ORDER_EQUALITY : Blockly.JavaScript.ORDER_RELATIONAL;  
+
   var argument0 = Blockly.JavaScript.valueToCode(block, 'Columns',
       Blockly.JavaScript.ORDER_NONE);
-  var argument1 = Blockly.JavaScript.valueToCode(block, 'B', order) || '0';
-  var filteredString = []
-  
-  if (isNaN(argument1)) {
-	filteredString = `.where(row => row.${argument0}  ${operator}=  ${argument1})`
-	filteredString = filteredString.replace(/["']/, "")
-	filteredString = filteredString.replace(/["']/, "")
-  } else {
-  	var filteredString = `.where(row => (row.${argument0}  ${operator}  ${argument1}))`
-	filteredString = filteredString.replace(/["']/g, "")
-  }
+
+ var filteredString = `.where(row => (${argument0}))`
   console.log(filteredString)
  return filteredString
 };
@@ -75,12 +54,8 @@ Blockly.JavaScript['dplyr_mutate'] = function(block) {
   var operator = OPERATORS[block.getFieldValue('OP')];
   var order = (operator == '==' || operator == '!=') ?
       Blockly.JavaScript.ORDER_EQUALITY : Blockly.JavaScript.ORDER_RELATIONAL;
-      
   var argument0 = block.getFieldValue('colName');
-  
   var argument1 = Blockly.JavaScript.valueToCode(block, 'Column', Blockly.JavaScript.ORDER_NONE);
-  
-
   var argument2 = Blockly.JavaScript.valueToCode(block, 'Value', Blockly.JavaScript.ORDER_NONE);
   
   // extract if the input block is a string (column)

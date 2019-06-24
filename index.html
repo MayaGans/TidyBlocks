@@ -182,6 +182,8 @@ button {
   <category name="variables" categorystyle="variables_category">
   	<block type="variable_text"></block>
   	<block type="variable_number"></block>
+   <block type="variable_compare"></block>
+  	<block type="variable_operation"></block>
   </category>
 </xml>
 
@@ -192,19 +194,14 @@ button {
      <block type="dplyr_filter">
         
         <value name="Columns">
-         	<block type ="variable_text">
-         		<field name="TEXT">Sepal_Length</field>
+         	<block type ="variable_operation">
+         	</block>
          	</block>
          </value>
          
-          <field name="OP">GTE</field>
-          
-          <value name="B">
-            <block type="variable_number">
-              <field name="NUM">5</field>
-            </block>
-        </value>
-        
+         
+         
+     
      </block>
     
     </next>
