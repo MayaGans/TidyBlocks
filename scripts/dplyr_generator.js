@@ -115,9 +115,19 @@ Blockly.JavaScript['dplyr_summarise'] = function(block) {
   										 Average: group.deflate(row => row.${argument1}).average()
   										 }
   										}).inflate()`
-  } else {
+  } else if (argument0 === "SUM") {
     	summariseString = `.select(group => { return { ${argumentGroup}: group.first().${argumentGroup},
   										 Sum: group.deflate(row => row.${argument1}).sum()
+  										 }
+  										}).inflate()`
+  } else if (argument0 == "SD"){
+    	summariseString = `.select(group => { return { ${argumentGroup}: group.first().${argumentGroup},
+  										 SD: group.deflate(row => row.${argument1}).std()
+  										 }
+  										}).inflate()`
+  } else {
+  	summariseString = `.select(group => { return { ${argumentGroup}: group.first().${argumentGroup},
+  										 SD: group.deflate(row => row.${argument1}).median()
   										 }
   										}).inflate()`
   }
