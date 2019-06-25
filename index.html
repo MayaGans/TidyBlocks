@@ -145,13 +145,19 @@ button {
     
 	<category name="dplyr" categorystyle="dplyr_category">
 
-    <block type="dplyr_groupby"></block>
+    <block type="dplyr_groupby">
+    <value name="Columns">
+         	<block type ="variable_operation">
+         	</block>
+         </value>
+         <field name="OP">AND</field>
+    </block>
+    
     <block type="dplyr_select"></block>
      
     <block type="dplyr_filter">
         <value name="Columns">
-         	<block type ="variable_text">
-         		<field name="TEXT">Column.Name</field>
+         	<block type ="variable_compare">
          	</block>
          </value>
          <field name="OP">EQ</field>
@@ -188,24 +194,7 @@ button {
 </xml>
 
  <xml id="startBlocks">
-    <block type="data_iris">
-    <next>
-    
-     <block type="dplyr_filter">
-        
-        <value name="Columns">
-         	<block type ="variable_operation">
-         	</block>
-         	</block>
-         </value>
-         
-         
-         
-     
-     </block>
-    
-    </next>
-    </block>
+    <block type="data_iris"></block>
     
   </xml>
 

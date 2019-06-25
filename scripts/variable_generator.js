@@ -27,9 +27,10 @@ Blockly.JavaScript['variable_compare'] = function(block) {
       Blockly.JavaScript.ORDER_EQUALITY : Blockly.JavaScript.ORDER_RELATIONAL;
   var argument0 = Blockly.JavaScript.valueToCode(block, 'A', order) || '0';
   var argument1 = Blockly.JavaScript.valueToCode(block, 'B', order) || '0';
-  var code = argument0 + ' ' + operator + ' ' + argument1;
+  var code = `row.${argument0} ${operator} ${argument1}`
+  code = code.replace(/["']/, "")
+  code = code.replace(/["']/, "")
   return [code, order];
-  console.log(code)
 };
 
 Blockly.JavaScript['variable_operation'] = function(block) {
@@ -53,9 +54,7 @@ Blockly.JavaScript['variable_operation'] = function(block) {
       argument1 = defaultArgument;
     }
   }
-  var code = `row.${argument0}  ${operator} row.${argument1}`
-  code = code.replace(/["']/g, "")
-  console.log(code)
+  var code = `${argument0} ${operator} ${argument1}`
   return [code, order];
   
 };

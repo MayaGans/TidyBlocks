@@ -23,10 +23,9 @@ Blockly.defineBlocksWithJsonArray([  // BEGIN JSON EXTRACT
       "value": 0
     }],
     "output": "Number",
-    "helpUrl": "%{BKY_MATH_NUMBER_HELPURL}",
+    "helpUrl": "",
     "style": "variable_blocks",
-    "tooltip": "%{BKY_MATH_NUMBER_TOOLTIP}",
-    "extensions": ["parent_tooltip_when_inline"]
+    "tooltip": ""
   },
   
     {
@@ -67,7 +66,6 @@ Blockly.defineBlocksWithJsonArray([  // BEGIN JSON EXTRACT
       {
         "type": "input_value",
         "name": "A",
-        "check": "Boolean"
       },
       {
         "type": "field_dropdown",
@@ -80,7 +78,6 @@ Blockly.defineBlocksWithJsonArray([  // BEGIN JSON EXTRACT
       {
         "type": "input_value",
         "name": "B",
-        "check": "Boolean"
       }
     ],
     "inputsInline": true,

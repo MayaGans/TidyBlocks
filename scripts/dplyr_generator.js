@@ -9,21 +9,23 @@ goog.require('Blockly');
 Blockly.JavaScript['dplyr_filter'] = function(block) {
   
 
-  var argument0 = Blockly.JavaScript.valueToCode(block, 'Columns',
+ var argument0 = Blockly.JavaScript.valueToCode(block, 'Columns',
       Blockly.JavaScript.ORDER_NONE);
-
+ 
  var filteredString = `.where(row => (${argument0}))`
   console.log(filteredString)
+  
  return filteredString
 };
 
 
 
 Blockly.JavaScript['dplyr_groupby'] = function(block) {
-  
-  var argument0 = block.getFieldValue('Column')
-   console.log(argument0)
-    var groupbyString = `.groupBy(row => (row.${argument0}))`
+
+  var argument0 = Blockly.JavaScript.valueToCode(block, 'Columns',
+      Blockly.JavaScript.ORDER_NONE);
+
+    var groupbyString = `.groupBy(row => (${argument0}))`
 	 groupbyString = groupbyString.replace(/["']/g, "")
 	 console.log(groupbyString)
   return groupbyString
@@ -32,9 +34,15 @@ Blockly.JavaScript['dplyr_groupby'] = function(block) {
 
 // we can only select a single column 
 Blockly.JavaScript['dplyr_select'] = function(block) {
-   var argument0 = block.getFieldValue('Column')
+
+  var argument0 = Blockly.JavaScript.valueToCode(block, 'Columns',
+      Blockly.JavaScript.ORDER_NONE);
+      
       console.log(argument0)
-   var selectString = ".subset([ \"" + argument0 + "\"])"
+   var selectString = ".subset([" + argument0 + "])"
+    selectString = selectString.replace(/\brow.\/b/gi, "")
+    selectString = selectString.replace(/&&/g, "][")
+    selectString = selectString.replace(" ", "")
    console.log(selectString)
   return selectString
 };
