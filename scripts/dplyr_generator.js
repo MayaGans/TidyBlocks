@@ -27,6 +27,7 @@ Blockly.JavaScript['dplyr_groupby'] = function(block) {
 
     var groupbyString = `.groupBy(row => (${argument0}))`
 	 groupbyString = groupbyString.replace(/["']/g, "")
+// groupbyString = groupbyString.replace(/(^|\s+)/g, "$1row.")
 	 console.log(groupbyString)
   return groupbyString
 };

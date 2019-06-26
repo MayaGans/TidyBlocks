@@ -1,6 +1,13 @@
 Blockly.JavaScript['variable_text'] = function(block) {
   // Text value.
   var code = Blockly.JavaScript.quote_(block.getFieldValue('TEXT'));
+  return [code, Blockly.JavaScript.ORDER_ATOMIC]
+};
+
+Blockly.JavaScript['variable_columnName'] = function(block) {
+  // Text value.
+  var code = Blockly.JavaScript.quote_(block.getFieldValue('TEXT'));
+  code = "row." + code.replace(/["']/g, "")
   return [code, Blockly.JavaScript.ORDER_ATOMIC];
 };
 
@@ -27,9 +34,7 @@ Blockly.JavaScript['variable_compare'] = function(block) {
       Blockly.JavaScript.ORDER_EQUALITY : Blockly.JavaScript.ORDER_RELATIONAL;
   var argument0 = Blockly.JavaScript.valueToCode(block, 'A', order) || '0';
   var argument1 = Blockly.JavaScript.valueToCode(block, 'B', order) || '0';
-  var code = `row.${argument0} ${operator} ${argument1}`
-  code = code.replace(/["']/, "")
-  code = code.replace(/["']/, "")
+  var code = `${argument0} ${operator} ${argument1}`
   return [code, order];
 };
 
