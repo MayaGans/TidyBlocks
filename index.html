@@ -4,8 +4,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   
    <script language="javascript" type="text/javascript" src="node_modules/data-forge/dist/web/index.js"></script>
-   <script src="node_modules/math.js" type="text/javascript"></script>
-  
+   <script language="javascript" type="text/javascript" src="node_modules/dist/math.js"></script>
+   
   <style>
   
 html, body {
@@ -178,8 +178,16 @@ button {
     </block>
     
     <block type="dplyr_summarise"></block>
+    <block type="dplyr_summarise2"></block>
     
   </category>
+  
+  <category name="stats" categorystyle="stats_category">
+    <block type="stats_mean"></block>
+     <block type="stats_sd"></block>
+      <block type="stats_sum"></block>
+  </category>
+  
   
   <category name="ggplot" categorystyle="ggplot_category">
     <block type="ggplot_plot"></block>
@@ -191,6 +199,7 @@ button {
    <block type="variable_compare"></block>
   	<block type="variable_operation"></block>
   	<block type="variable_columnName"></block>
+<block type="variable_comma"></block>
   </category>
 </xml>
 
@@ -213,6 +222,8 @@ button {
   <script src="scripts/data_generator.js"></script>
     <script src="scripts/variable_blocks.js"></script>
   <script src="scripts/variable_generator.js"></script>
+     <script src="scripts/stats_blocks.js"></script>
+  <script src="scripts/stats_generator.js"></script>
   
 <script src="styles/block_themes.js"></script>
     

@@ -11,6 +11,7 @@ Blockly.JavaScript['dplyr_filter'] = function(block) {
 
  var argument0 = Blockly.JavaScript.valueToCode(block, 'Columns',
       Blockly.JavaScript.ORDER_NONE);
+ console.log(argument0)
  
  var filteredString = `.where(row => (${argument0}))`
   console.log(filteredString)
@@ -27,6 +28,7 @@ Blockly.JavaScript['dplyr_groupby'] = function(block) {
 
     var groupbyString = `.groupBy(row => (${argument0}))`
 	 groupbyString = groupbyString.replace(/["']/g, "")
+
 // groupbyString = groupbyString.replace(/(^|\s+)/g, "$1row.")
 	 console.log(groupbyString)
   return groupbyString
@@ -131,3 +133,23 @@ Blockly.JavaScript['dplyr_summarise'] = function(block) {
   return summariseString
   
 };
+
+
+Blockly.JavaScript['dplyr_summarise2'] = function(block) {
+  
+  // need an if else -- if just one summary stat use 
+  var argument0 =  Blockly.JavaScript.valueToCode(block, 'Columns', Blockly.JavaScript.ORDER_NONE);
+  // otherwise if in an and statement use
+  var argument0 =  Blockly.JavaScript.statementToCode(block, 'Columns')
+  
+
+  var summariseString = `.select(group => { return { Species: group.first().Species,
+  										 ${argument0},
+  										}}).inflate()`
+  summariseString = summariseString.replace(/["']/g, "")
+  summariseString = summariseString.replace(/&&/g, ",")
+  console.log(summariseString)
+  return summariseString
+  
+};
+

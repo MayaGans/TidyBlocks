@@ -26,7 +26,12 @@ var tidyBlockStyles = {
     "colourSecondary": "#FEBE4C",
     "colourTertiary": "#BF9000",
     "hat": "cap"
-  }
+  },
+ "stats_blocks": {
+      "colourPrimary": "#AF43B7",
+      "colourSecondary":"#DFA8E3",
+      "colourTertiary":"#6D1174"
+  },
 };
 
 var tidyCategoryStyles = {
@@ -34,7 +39,8 @@ var tidyCategoryStyles = {
   "dplyr_category":{ "colour": "#76AADB", },
   "data_category": { "colour": "#FEBE4C", },
   "ggplot_category": { "colour": "#A4C588", },
-  "variables_category": { "colour": "#E7553C", }
+  "variables_category": { "colour": "#E7553C", },
+  "stats_category": { "colour": "#AF43B7", }
   
 };
 

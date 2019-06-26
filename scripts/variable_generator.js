@@ -59,7 +59,27 @@ Blockly.JavaScript['variable_operation'] = function(block) {
       argument1 = defaultArgument;
     }
   }
-  var code = `${argument0} ${operator} ${argument1}`
+  var code = argument0 + ' ' + operator + ' ' + argument1;
+  console.log(code)
   return [code, order];
+};
+
+
+Blockly.JavaScript['variable_comma'] = function(block) {
+  // Operations 'and', 'or'.
   
+  
+  var operator = (block.getFieldValue('OP') == 'AND') ? '&&' : '||';
+  var order = (operator == '&&') ? Blockly.JavaScript.ORDER_LOGICAL_AND :
+      Blockly.JavaScript.ORDER_LOGICAL_OR;
+      
+  var argument0 = Blockly.JavaScript.valueToCode(block, 'A', Blockly.JavaScript.ORDER_NONE);
+  console.log(argument0)
+  
+  var argument1 = Blockly.JavaScript.valueToCode(block, 'B', Blockly.JavaScript.ORDER_NONE);
+  console.log(argument1)
+  
+  var code = argument0 + ' ' + operator + ' ' + argument1;
+  console.log(code)
+  return code;
 };
