@@ -85,61 +85,13 @@ Blockly.JavaScript['dplyr_mutate'] = function(block) {
  return mutateString
 };
 
-  
+
 Blockly.JavaScript['dplyr_summarise'] = function(block) {
-
-  var argumentGroup = block.getParent().inputList[1].fieldRow[0].text_ 
-  console.log(argumentGroup)
-
-      
-  var argument0 = block.getFieldValue('transformation');
-  var argument1 = block.getFieldValue('colName')
-  var summariseString = []
-
-  if (argument0 === "MEAN") {
-  	summariseString = `.select(group => { return { ${argumentGroup}: group.first().${argumentGroup},
-  										 Average: group.deflate(row => row.${argument1}).average()
-  										 }
-  										}).inflate()`
-  } else if (argument0 === "SUM") {
-    	summariseString = `.select(group => { return { ${argumentGroup}: group.first().${argumentGroup},
-  										 Sum: group.deflate(row => row.${argument1}).sum()
-  										 }
-  										}).inflate()`
-  } else if (argument0 == "SD"){
-    	summariseString = `.select(group => { return { ${argumentGroup}: group.first().${argumentGroup},
-  										 SD: group.deflate(row => row.${argument1}).std()
-  										 }
-  										}).inflate()`
-  } else if (argument0 == "MEDIAN"){
-  	summariseString = `.select(group => { return { ${argumentGroup}: group.first().${argumentGroup},
-  										 Median: group.deflate(row => row.${argument1}).median()
-  										 }
-  										}).inflate()`
-  } else if (argument0 == "MIN"){
-    	summariseString = `.select(group => { return { ${argumentGroup}: group.first().${argumentGroup},
-  										 Min: group.deflate(row => row.${argument1}).min()
-  										 }
-  										}).inflate()`
-  } else {
-    	summariseString = `.select(group => { return { ${argumentGroup}: group.first().${argumentGroup},
-  										 Max: group.deflate(row => row.${argument1}).max()
-  										 }
-  										}).inflate()`
-  } 
-  
-  summariseString = summariseString.replace(/["']/g, "")
-  console.log(summariseString)
-  return summariseString
-  
-};
-
-
-Blockly.JavaScript['dplyr_summarise2'] = function(block) {
   
   // need an if else -- if just one summary stat use 
   var argument0 =  Blockly.JavaScript.valueToCode(block, 'Columns', Blockly.JavaScript.ORDER_NONE);
   // otherwise if in an and statement use
+  
 
   var summariseString = `.select(group => { return { Species: group.first().Species,
   										 ${argument0},

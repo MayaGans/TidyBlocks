@@ -83,7 +83,7 @@ Blockly.Blocks['dplyr_mutate'] = {
   }
 };
 
-Blockly.Blocks['dplyr_summarise2'] = {
+Blockly.Blocks['dplyr_summarise'] = {
 
   init: function() {
     this.appendDummyInput()
@@ -100,21 +100,5 @@ Blockly.Blocks['dplyr_summarise2'] = {
 
  }
   
-};
-Blockly.Blocks['dplyr_summarise'] = {
-  init: function() {
-    this.appendDummyInput()
-        .appendField("SUMMARISE");
-    this.appendDummyInput()
-        .appendField(new Blockly.FieldDropdown([["mean","MEAN"], ["sum","SUM"], ["sd", "SD"], ["median", "MEDIAN"], ["min", "MIN"], ["max", "MAX"]]), "transformation");
-    this.appendDummyInput()
-        .appendField(new Blockly.FieldTextInput("columnName"), "colName");
-    this.setInputsInline(true);
-    this.setPreviousStatement(true, null);
-    this.setNextStatement(true, null);
-    this.setStyle('dplyr_blocks')
- this.setTooltip("");
- this.setHelpUrl("");
-  }
 };
 
