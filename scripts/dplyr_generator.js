@@ -28,6 +28,7 @@ Blockly.JavaScript['dplyr_groupby'] = function(block) {
 
     var groupbyString = `.groupBy(row => (${argument0}))`
 	 groupbyString = groupbyString.replace(/["']/g, "")
+	 groupbyString = groupbyString.replace(/&&/g, "+")
 
 // groupbyString = groupbyString.replace(/(^|\s+)/g, "$1row.")
 	 console.log(groupbyString)
@@ -40,11 +41,10 @@ Blockly.JavaScript['dplyr_select'] = function(block) {
 
   var argument0 = Blockly.JavaScript.valueToCode(block, 'Columns',
       Blockly.JavaScript.ORDER_NONE);
-      
-      console.log(argument0)
+    
    var selectString = ".subset([" + argument0 + "])"
     selectString = selectString.replace(/\brow.\/b/gi, "")
-    selectString = selectString.replace(/&&/g, "][")
+    selectString = selectString.replace(/&&/g, "")
     selectString = selectString.replace(" ", "")
    console.log(selectString)
   return selectString
