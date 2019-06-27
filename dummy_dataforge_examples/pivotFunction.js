@@ -31,18 +31,6 @@ const dataForge = require('data-forge')
 // Group by client.
 
 
-const summarized = sampleDF_1
-    .groupBy(row => row.Col2)
-    .select(group => ({
-        ClientName: group.first().Col2,
-        Amount: group.deflate(row => row.Col1).sum(), // Sum sales per client.
-    }))
-    .inflate() // Series -> dataframe.
-    .toArray(); // Convert to regular JS array.
-
-console.log(summarized)
-
-
 const columnsToGroupBy = ["Col2", "Col3"];
 const pivotted = sampleDF_1
 	.pivot(columnsToGroupBy, {
@@ -50,4 +38,6 @@ const pivotted = sampleDF_1
         OutputColumn1: series => series.sum(),
         OutputColumn2: series => series.average(),
     }
-}).inflate().toArray()
+})
+
+console.log(pivotted)
