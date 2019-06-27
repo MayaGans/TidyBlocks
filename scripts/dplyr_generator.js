@@ -140,8 +140,6 @@ Blockly.JavaScript['dplyr_summarise2'] = function(block) {
   // need an if else -- if just one summary stat use 
   var argument0 =  Blockly.JavaScript.valueToCode(block, 'Columns', Blockly.JavaScript.ORDER_NONE);
   // otherwise if in an and statement use
-  var argument0 =  Blockly.JavaScript.statementToCode(block, 'Columns')
-  
 
   var summariseString = `.select(group => { return { Species: group.first().Species,
   										 ${argument0},
