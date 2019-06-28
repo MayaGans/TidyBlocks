@@ -28,16 +28,6 @@ const dataForge = require('data-forge')
 			}
 	]);
 
-// Group by client.
 
-
-const columnsToGroupBy = ["Col2", "Col3"];
-const pivotted = sampleDF_1
-	.pivot(columnsToGroupBy, {
-    Col1: {
-        OutputColumn1: series => series.sum(),
-        OutputColumn2: series => series.average(),
-    }
-})
-
+const pivotted = sampleDF_1.pivot("ColumnToGroupBy", "ColumnToSum", series => series.sum());
 console.log(pivotted)
