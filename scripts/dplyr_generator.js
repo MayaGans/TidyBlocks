@@ -26,11 +26,11 @@ Blockly.JavaScript['dplyr_groupby'] = function(block) {
   var argument0 = Blockly.JavaScript.valueToCode(block, 'Columns',
       Blockly.JavaScript.ORDER_NONE);
 
+
     var groupbyString = `.groupBy(row => ${argument0})`
 	 groupbyString = groupbyString.replace(/["']/g, "")
 	 groupbyString = groupbyString.replace(/&&/g, "+")
-
-// groupbyString = groupbyString.replace(/(^|\s+)/g, "$1row.")
+	 
 	 console.log(groupbyString)
   return groupbyString
 };
@@ -42,10 +42,12 @@ Blockly.JavaScript['dplyr_select'] = function(block) {
   var argument0 = Blockly.JavaScript.valueToCode(block, 'Columns',
       Blockly.JavaScript.ORDER_NONE);
     
-   var selectString = ".subset([" + argument0 + "])"
-    selectString = selectString.replace(/\brow.\/b/gi, "")
-    selectString = selectString.replace(/&&/g, "")
-    selectString = selectString.replace(" ", "")
+   var selectString = `.subset([\" ${argument0} \"])`
+    selectString = selectString.replace(/row./gi, " ")
+        selectString = selectString.replace(/&&/g, ",")
+     selectString = selectString.replace(/ /gi, "")
+     selectString = selectString.replace(/,/gi, "\",\"")
+
    console.log(selectString)
   return selectString
 };
