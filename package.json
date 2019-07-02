@@ -11,6 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "data-forge": "^1.7.2",
+    "lodash": "^4.17.11",
     "mathjs": "^6.0.2",
     "papaparse": "^5.0.0"
   }

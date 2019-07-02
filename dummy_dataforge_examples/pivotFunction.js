@@ -29,5 +29,15 @@ const dataForge = require('data-forge')
 	]);
 
 
-const pivotted = sampleDF_1.pivot("ColumnToGroupBy", "ColumnToSum", series => series.sum());
+
+
+const columnsToGroupBy = ["Col2", "Col3"];
+const pivotted = sampleDF_1
+	.pivot(columnsToGroupBy, {
+    Col1: {
+        OutputColumn1: series => series.sum(),
+        OutputColumn2: series => series.average(),
+    }
+})
+
 console.log(pivotted)

@@ -40,33 +40,6 @@ Blockly.JavaScript['variable_compare'] = function(block) {
 
 Blockly.JavaScript['variable_operation'] = function(block) {
   // Operations 'and', 'or'.
-  var operator = (block.getFieldValue('OP') == 'AND') ? '&&' : '||';
-  var order = (operator == '&&') ? Blockly.JavaScript.ORDER_LOGICAL_AND :
-      Blockly.JavaScript.ORDER_LOGICAL_OR;
-  var argument0 = Blockly.JavaScript.valueToCode(block, 'A', order);
-  var argument1 = Blockly.JavaScript.valueToCode(block, 'B', order);
-  if (!argument0 && !argument1) {
-    // If there are no arguments, then the return value is false.
-    argument0 = 'false';
-    argument1 = 'false';
-  } else {
-    // Single missing arguments have no effect on the return value.
-    var defaultArgument = (operator == '&&') ? 'true' : 'false';
-    if (!argument0) {
-      argument0 = defaultArgument;
-    }
-    if (!argument1) {
-      argument1 = defaultArgument;
-    }
-  }
-  var code = argument0 + ' ' + operator + ' ' + argument1;
-  console.log(code)
-  return [code, order];
-};
-
-
-Blockly.JavaScript['variable_comma'] = function(block) {
-  // Operations 'and', 'or'.
   
   var order = Blockly.JavaScript.ORDER_NONE
   var operator = (block.getFieldValue('OP') == 'AND') ? '&&' : '||';

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Block Output to Graph</title>
+        <script type="text/javascript" src="d3/d3.js"></script>
+        <script src='https://unpkg.com/simple-statistics@7.0.2/dist/simple-statistics.min.js'></script>
+        <script src="node_modules/lodash/lodash.js"></script>
+		<style>
+
+         .chart .xAxis path,line {
+            stroke: #dddddd;
+         }
+
+        .chart .yAxis path,line {
+            stroke: #dddddd;
+        }
+
+        .chart circle {
+            fill: #aaaaaa;
+        }
+
+        .chart path.regressionLine {
+            stroke: #43A047;
+            fill: none;
+            stroke-width: 1.2;
+            stroke-dasharray: 3,5;
+        }
+	
+		
+        </style>
+    </head>
+    
+<body>
+<script type="text/javascript">
+		
+		
+        var w = 700;
+		var h = 500;
+        
+        // create dataset
+        yearsExperience = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+        salaries = [39343, 46205, 37731, 43525, 39891, 56642, 60150, 54445, 64445, 57189, 63218]
+
+        data = _.zipWith(yearsExperience, salaries, (year, salary) => (
+                { x: year,
+                  y: salary
+                }
+        ))
+
+        margin = ({ top: 20, right: 20, bottom: 20, left: 50 })
+
+        // code to create a scatter plot
+        xScale = d3.scaleLinear()
+           .domain([0, d3.max(data, d => d.x)])
+           .range([margin.left, width - margin.right])
+
+        yScale = d3.scaleLinear()
+           .domain([0, 20000 + d3.max(data, d => d.y)]) // added a bit of breathing room (20,000)
+           .range([height - margin.bottom, margin.top])
+
+        xAxis = g => g.attr('transform', `translate(0, ${height - margin.bottom})`)
+              .attr("class", "xAxis")
+              .call(d3.axisBottom(xScale))
+
+        yAxis = g => g.attr('transform', `translate(${margin.left}, 0)`)
+              .attr("class", "yAxis")
+              .call(d3.axisLeft(yScale))
+
+        //linear regression code
+        linearRegression = ss.linearRegression(data.map(d => [d.x, d.y]))
+
+        linearRegressionLine = ss.linearRegressionLine(linearRegression)
+
+        // We need to define the 2 points of the regression line to be able to have D3 make a line.
+// This just makes 2 points, 1 for the start and 1 for the end of our line.
+regressionPoints = {
+  const firstX = data[0].x;
+  const lastX = data.slice(-1)[0].x;
+  const xCoordinates = [firstX, lastX];
+  
+  return xCoordinates.map(d => ({
+    x: d,                         // We pick x and y arbitrarily, just make sure they match d3.line accessors
+    y: linearRegressionLine(d)
+  }));
+}
+
+        line = d3.line()
+                 .x(d => xScale(d.x))
+                 .y(d => yScale(d.y))
+
+         renderChart = (target) => {
+  
+            // First, let's make the scatterplot
+            target.selectAll('circle')
+                    .data(data)
+                .enter().append('circle')
+                    .attr('r', 3)
+                    .attr('cx', d => xScale(d.x))
+                    .attr('cy', d => yScale(d.y));
+          
+            // Next, we'll draw the regression line
+            target.append('path')
+                    .classed('regressionLine', true)
+                    .datum(regressionPoints)
+                    .attr('d', line);
+          
+            // Lastly, we add the axes!
+            target.append('g')
+                  .call(xAxis);
+            target.append('g')
+                  .call(yAxis);
+        }
+
+
+	    </script>
+    </body>
+</html>
