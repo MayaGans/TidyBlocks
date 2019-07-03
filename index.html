@@ -317,7 +317,7 @@ var iris = new dataForge.DataFrame(
       var code = Blockly.JavaScript.workspaceToCode(demoWorkspace);
       if (code.includes("vega")) {
         df = code.split("SPLIT", 2)
-        dfArray = eval(df[0]).toArray()
+        const dfArray = eval(df[0]).toArray()
         console.log(dfArray)
         console.log(df[1])
         eval(df[1])
@@ -355,17 +355,21 @@ var iris = new dataForge.DataFrame(
 
   var test = iris.toArray()
 
-   let spec = {
+  let spec = `Object.assign({}, {
     "width": 700,
     "height": 250,
     "data": { "values": test },
     "mark": {"type": "bar", "tooltip": null },
     "encoding": {
       "x": { "bin": {"maxbins": 30}, "field": "Sepal_Length", "type": "quantitative"},
-    "y": { "aggregate": "count", "type": 'quantitative'}
+      "y": { "aggregate": "count", "type": 'quantitative'}
     }
-    }
-  vegaEmbed("#plotOutput", spec, {})
+    });
+  vegaEmbed("#plotOutput", spec, {});`
+console.log(spec);
+ let stuff = eval(spec);
+ // console.log(stuff)
+console.log("test")
 
   </script>
 

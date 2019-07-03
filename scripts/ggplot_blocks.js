@@ -33,26 +33,6 @@
   "helpUrl": ""
 },
 {
-  "type": "ggplot_histogram",
-  "message0": "HISTOGRAM %1 %2",
-  "args0": [
-    {
-      "type": "input_value",
-      "name": "Columns"
-    },
-    {
-      "type": "field_input",
-      "name": "bins",
-      "text": "bins"
-    }
-  ],
-  "inputsInline": true,
-  "previousStatement": null,
-  "style": "ggplot_blocks",
-  "tooltip": "",
-  "helpUrl": ""
-},
-{
   "type": "ggplot_box",
   "message0": "BOX %1 %2 %3 %4 %5",
   "args0": [
@@ -87,7 +67,7 @@
 
 ]);
 
-Blockly.Blocks['ggplot_histogram2'] = {
+Blockly.Blocks['ggplot_histogram'] = {
   init: function() {
     this.appendValueInput("Columns")
         .setCheck(null)

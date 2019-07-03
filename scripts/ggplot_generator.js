@@ -1,10 +1,12 @@
 Blockly.JavaScript['ggplot_histogram'] = function(block) {
   
   var argument0 =  Blockly.JavaScript.valueToCode(block, 'Columns', Blockly.JavaScript.ORDER_NONE)
-  argument0 = argument0.replace(/row./gi, " ")
+  argument0 = argument0.replace(/row./gi, "")
   var argument1 =  block.getFieldValue("bins")
   
-  var histogram = `SPLIT let spec = {
+  var histogram = `SPLIT 
+  console.log("inside code")
+  let spec = {
     "width": 700,
     "height": 250,
     "data": { "values": dfArray },
