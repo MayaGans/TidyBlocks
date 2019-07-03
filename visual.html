@@ -35,17 +35,20 @@ const iris = [
                 {"Sepal_Length":5.1,"Sepal_Width":3.8,"Petal_Length":1.5,"Petal_Width":0.3,"Species":"setosa"},
                 {"Sepal_Length":5.4,"Sepal_Width":3.4,"Petal_Length":1.7,"Petal_Width":0.2,"Species":"setosa"}]
 
-    let spec = {
-      "$schema": "https://vega.github.io/schema/vega-lite/v2.0.json",
-      "description": "Create data array but do not display anything.",
-      "data": { "values": iris },
-      "mark": "bar",
-      "encoding": {
-        "x": { "bin": {"maxbins": 30}, "field": "Sepal_Length", "type": "quantitative"},
-        "y": { "aggregate": "count", "type": 'quantitative'}
-      }
+  var test = iris.toArray()
+
+  let spec = {
+    "width": 700,
+    "height": 250,
+    "data": { "values": test },
+    "mark": {"type": "bar", "tooltip": null },
+    "encoding": {
+      "x": { "bin": {"maxbins": 30}, "field": "Sepal_Length", "type": "quantitative"},
+      "y": { "aggregate": "count", "type": 'quantitative'}
     }
-    vegaEmbed("#vis", spec, {})
+  };
+  vegaEmbed("#plotOutput", spec, {});
+
   </script>
 
 </body>

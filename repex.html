@@ -1,0 +1,51 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script language="javascript" type="text/javascript" src="node_modules/data-forge/dist/web/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.4.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@3.3.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@4.2.0"></script>
+  </head>
+  <body>
+  
+    <button onclick="doit()">do it</button>
+    <div id="plot"></div>
+
+    <script>
+      const frame = new dataForge.DataFrame([
+        {"Sepal_Length":5.1, "Sepal_Width":3.5, "Petal_Length":1.4, "Petal_Width":0.2, "Species":"setosa"},
+        {"Sepal_Length":4.9, "Sepal_Width":3, "Petal_Length":1.4, "Petal_Width":0.2, "Species":"setosa"}
+      ])
+      console.log('original frame is', frame.toString())
+      function doit() {
+        const code = `/*vega*/ x = frame; SPLIT let spec = {
+    "width": 700,
+    "height": 250,
+    "data": { "values": firstPart },
+    "mark": "bar",
+    "encoding": {
+      "x": { "bin": {"maxbins": 30}, "field": "Sepal_Length", "type": "quantitative"},
+      "y": { "aggregate": "count", "type": 'quantitative'}
+    }
+  }
+  vegaEmbed("#plot", spec, {})`
+
+        var result = 'UNINITIALIZED';
+        if (code.includes('vega')) {
+          console.log('vega branch')
+          const halves = code.split('SPLIT', 2)
+          console.log('halves[0] is', halves[0])
+          console.log('halves[1] is', halves[1])
+          const firstPart = eval(halves[0]).toArray()
+          console.log('firstPart is', firstPart)
+          result = eval(halves[1])
+          console.log(result)
+        } else {
+          console.log('else branch')
+          result = eval(code)
+        }
+        console.log('result is', result)
+      }
+    </script>
+  </body>
+</html>

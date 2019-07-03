@@ -5,7 +5,6 @@ Blockly.JavaScript['ggplot_histogram'] = function(block) {
   var argument1 =  block.getFieldValue("bins")
   
   var histogram = `SPLIT 
-  console.log("inside code")
   let spec = {
     "width": 700,
     "height": 250,
@@ -17,7 +16,6 @@ Blockly.JavaScript['ggplot_histogram'] = function(block) {
     }
   }
   vegaEmbed("#plotOutput", spec, {})`
-
 
   return histogram
 };
