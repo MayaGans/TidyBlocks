@@ -5,17 +5,19 @@ Blockly.JavaScript['ggplot_histogram'] = function(block) {
   var argument1 =  block.getFieldValue("bins")
   
   var histogram = `let spec = {
-    "$schema": "https://vega.github.io/schema/vega-lite/v2.0.json",
-    "description": "Create data array but do not display anything.",
-    "data": { "values": iris,
+    "width": 700,
+    "height": 250,
+    "data": { "values": test },
     "mark": "bar",
     "encoding": {
       "x": { "bin": {"maxbins": ${argument1}}, "field": "${argument0}", "type": "quantitative"},
       "y": { "aggregate": "count", "type": 'quantitative'}
     }
   }
-  vegaEmbed("#dataTableOutput", spec, {})`
-   console.log(histogram)
+  vegaEmbed("#plotOutput", spec, {})`
+
+    
+console.log(histogram)
   return histogram
 };
 
