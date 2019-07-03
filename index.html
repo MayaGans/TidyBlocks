@@ -311,13 +311,16 @@ var iris = new dataForge.DataFrame(
   );
 
   var test = iris.toArray()
-  
+
     function showCode() {
       // run code and show in field
       Blockly.JavaScript.INFINITE_LOOP_TRAP = null;
       var code = Blockly.JavaScript.workspaceToCode(demoWorkspace);
       if (code.includes("vega")) {
-        eval(code)
+        df = code.split("SPLIT", 2)
+        dfArray = eval(df[0]).toArray()
+        console.log(dfArray)
+        eval(df[1])
       } else {
         dfArray = eval(code).toArray()
         document.getElementById('dataTableOutput').innerHTML = json2table(dfArray);
@@ -356,7 +359,7 @@ var iris = new dataForge.DataFrame(
     "data": { "values": test },
     "mark": "bar",
     "encoding": {
-      "x": { "bin": {"maxbins": 100}, "field": "Sepal_Length", "type": "quantitative"},
+      "x": { "bin": {"maxbins": 30}, "field": "Sepal_Length", "type": "quantitative"},
     "y": { "aggregate": "count", "type": 'quantitative'}
     }
     }

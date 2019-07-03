@@ -4,10 +4,10 @@ Blockly.JavaScript['ggplot_histogram'] = function(block) {
   argument0 = argument0.replace(/row./gi, " ")
   var argument1 =  block.getFieldValue("bins")
   
-  var histogram = `let spec = {
+  var histogram = `SPLIT let spec = {
     "width": 700,
     "height": 250,
-    "data": { "values": test },
+    "data": { "values": dfArray },
     "mark": "bar",
     "encoding": {
       "x": { "bin": {"maxbins": ${argument1}}, "field": "${argument0}", "type": "quantitative"},
@@ -16,8 +16,7 @@ Blockly.JavaScript['ggplot_histogram'] = function(block) {
   }
   vegaEmbed("#plotOutput", spec, {})`
 
-    
-console.log(histogram)
+
   return histogram
 };
 
