@@ -6,7 +6,7 @@ var readCSV = function(url) {
         download: true,
         header: true,
         complete: function(results) {
-            listen = results.data;
+            console.log(results.data)
         }
     });
 }
