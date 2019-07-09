@@ -7,6 +7,10 @@
    <script src="https://cdn.jsdelivr.net/npm/vega@5.4.0"></script>
    <script src="https://cdn.jsdelivr.net/npm/vega-lite@3.3.0"></script>
    <script src="https://cdn.jsdelivr.net/npm/vega-embed@4.2.0"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+   <script src="node_modules/jquery-csv/src/jquery.csv.js"></script>
+   <script src="bundle.js"></script>
+  
    
   <style>
   
@@ -141,7 +145,7 @@ button {
 	<category name="Data" categorystyle="data_category">
       <block type="data_sample_1"></block>
       <block type="data_iris"></block>
-      <block type="data_csv"></block>
+      <block type="data_url"></block>
     </category>
     
 	<category name="dplyr" categorystyle="dplyr_category">
@@ -196,6 +200,7 @@ button {
   <category name="ggplot" categorystyle="ggplot_category">
     <block type="ggplot_bar"></block>
     <block type="ggplot_histogram"></block>
+    <block type="ggplot_scatter"></block>
     <block type="ggplot_box"></block>
   </category>
   
@@ -321,7 +326,8 @@ var iris = new dataForge.DataFrame(
         console.log(dfArray)
         eval(df[1])
       } else {
-        dfArray = eval(code).toArray()
+        dfArray = eval(code)
+        console.log(dfArray)
         document.getElementById('dataTableOutput').innerHTML = json2table(dfArray);
       }
       

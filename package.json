@@ -11,10 +11,15 @@
   "license": "ISC",
   "dependencies": {
     "@data-forge-plot/render": "0.0.2",
+    "csv-to-array": "^1.0.2",
     "data-forge": "^1.7.2",
     "data-forge-plot": "^0.6.2",
+    "fs": "0.0.1-security",
+    "jQuery": "^1.7.4",
+    "jquery-csv": "^1.0.3",
     "lodash": "^4.17.11",
     "mathjs": "^6.0.2",
-    "papaparse": "^5.0.0"
+    "papaparse": "^5.0.0",
+    "request-promise": "^4.2.4"
   }
 }

@@ -27,13 +27,14 @@ Blockly.JavaScript['dplyr_groupby'] = function(block) {
       Blockly.JavaScript.ORDER_NONE);
 
 
-    var groupbyString = `.groupBy(row => ${argument0})`
-	 groupbyString = groupbyString.replace(/["']/g, "")
+    var groupbyString = `.groupBy(row => row["${argument0}"]).selectMany(group => group).inflate();`
 	 groupbyString = groupbyString.replace(/&&/g, "+")
 	 
 	 console.log(groupbyString)
   return groupbyString
 };
+
+//var output = groupBy(...).selectMany(group -> group).inflate();
 
 
 // we can only select a single column 

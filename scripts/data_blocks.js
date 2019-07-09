@@ -14,13 +14,13 @@ Blockly.defineBlocksWithJsonArray([
   "colour": "#FEBE4C"
 },
 {
-  "type": "data_csv",
-  "message0": "import csv %1",
+  "type": "data_url",
+  "message0": "import url %1",
   "args0": [
     {
       "type": "field_input",
       "name": "ext",
-      "text": "fileExtension"
+      "text": "url"
     }
   ],
   "nextStatement": null,

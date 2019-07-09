@@ -10,3 +10,12 @@ Blockly.JavaScript['data_sample_1'] = function(block) {
 Blockly.JavaScript['data_iris'] = function(block) {
 	return 'iris'
 }
+
+Blockly.JavaScript['data_url'] = function(block) {
+
+    var argument0 = block.getFieldValue("ext")
+
+    const dfURL = `importCsvFile("${argument0}")`
+    console.log(dfURL)
+    return dfURL
+}
