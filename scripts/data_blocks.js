@@ -14,8 +14,8 @@ Blockly.defineBlocksWithJsonArray([
   "colour": "#FEBE4C"
 },
 {
-  "type": "data_url",
-  "message0": "import url %1",
+  "type": "data_urlCSV",
+  "message0": "import CSV %1",
   "args0": [
     {
       "type": "field_input",
@@ -28,5 +28,21 @@ Blockly.defineBlocksWithJsonArray([
   "tooltip": "",
   "helpUrl": "",
    "colour": "#FEBE4C"
-}
+},
+{
+  "type": "data_urlJSON",
+  "message0": "import JSON %1",
+  "args0": [
+    {
+      "type": "field_input",
+      "name": "ext",
+      "text": "url"
+    }
+  ],
+  "nextStatement": null,
+  "style": {"hat":"cap"},
+  "tooltip": "",
+  "helpUrl": "",
+   "colour": "#FEBE4C"
+},
 ]);

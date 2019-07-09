@@ -11,11 +11,24 @@ Blockly.JavaScript['data_iris'] = function(block) {
 	return 'iris'
 }
 
-Blockly.JavaScript['data_url'] = function(block) {
+Blockly.JavaScript['data_urlCSV'] = function(block) {
 
     var argument0 = block.getFieldValue("ext")
 
-    const dfURL = `readCSV("${argument0}")`
-    console.log(dfURL)
+    const dfURL = `const urlDF = readCSV("${argument0}")`
+    return dfURL
+}
+
+Blockly.JavaScript['data_urlJSON'] = function(block) {
+
+    var argument0 = block.getFieldValue("ext")
+
+    const dfURL = `const urlDF =  
+    
+    getJSON("${argument0}").then(function(data) {
+        var urlDF = data.result;
+    });
+    console.log(urlDF)`
+
     return dfURL
 }
