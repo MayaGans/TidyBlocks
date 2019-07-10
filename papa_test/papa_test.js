@@ -8,7 +8,7 @@
   </head>
   <body>
       <script>
-          const x = readCSV("https://raw.githubusercontent.com/MayaGans/TidyBlocks/master/c-section.csv")
+          const x = readCSV("https://raw.githubusercontent.com/MayaGans/TidyBlocks/master/data/c-section.csv")
           console.log(x)
       </script>
   </body>
