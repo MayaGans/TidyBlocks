@@ -241,34 +241,6 @@ button {
     
 <script>
 
-var getJSON = function(url) {
-  return new Promise(function(resolve, reject) {
-    var xhr = new XMLHttpRequest();
-    xhr.open('get', url, true);
-    xhr.responseType = 'json';
-    xhr.onload = function() {
-      var status = xhr.status;
-     if (status == 200) {
-        resolve(xhr.response);
-      } else {
-        reject(status);
-      }
-    };
-    xhr.send();
-  });
-};
-
-getJSON("<https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_hour.geojson>").then(function(data) { // Replace <URL> With your URL
-    var jsondata = data.result; //store result in variable
-    console.log(data.result)
-    // Your code here....///
-    ///  Now you can access the json's data using jsondata variable:  //
-    // jsondata[0].year will have the value of year key, jsondata[0].month will have month key and so on.... //
-
-}, function(status) { //error detection....
-  alert('Something went wrong.');
-});
-
 	var blocklyArea = document.getElementById('blocklyArea');
     var blocklyDiv = document.getElementById('blocklyDiv');
 
@@ -352,9 +324,9 @@ var iris = new dataForge.DataFrame(
         const dfArray = eval(df[0]).toArray()
         console.log(dfArray)
         eval(df[1])
-      } else if (code.includes("urlDF")) {
+      } else if (code.includes("readCSV")) {
         dfArray = eval(code)
-        document.getElementById('dataTableOutput').innerHTML = json2table(dfArray);
+        console.log(dfArray)
       } else {
         dfArray = eval(code).toArray()
         console.log(dfArray)

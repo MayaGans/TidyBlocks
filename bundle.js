@@ -6,11 +6,11 @@ var readCSV = function(url) {
         download: true,
         header: true,
         complete: function(results) {
-            console.log(results.data)
+            urlDF = results.data
+            console.log(urlDF)
         }
     });
 }
-
 window.readCSV = readCSV
 },{"papaparse":2}],2:[function(require,module,exports){
 /* @license

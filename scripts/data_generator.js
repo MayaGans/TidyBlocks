@@ -15,7 +15,7 @@ Blockly.JavaScript['data_urlCSV'] = function(block) {
 
     var argument0 = block.getFieldValue("ext")
 
-    const dfURL = `const urlDF = readCSV("${argument0}")`
+    const dfURL = `window.dfURL = readCSV("${argument0}")`
     return dfURL
 }
 
