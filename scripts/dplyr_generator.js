@@ -78,7 +78,8 @@ Blockly.JavaScript['dplyr_summarise'] = function(block) {
 
   var summariseString = `.select(group => { return { Species: group.first().Species,
   										 ${argument0},
-  										}}).inflate()`
+                      }}).inflate()`
+                      //.getSeries("Sepal_Length").average());
   summariseString = summariseString.replace(/["']/g, "")
   summariseString = summariseString.replace(/&&/g, ",")
   console.log(summariseString)
