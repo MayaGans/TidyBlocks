@@ -35,7 +35,7 @@ Blockly.JavaScript['stats_sum'] = function(block) {
       argument0 = argument0.replace("row.", "")
 	console.log(argument0)
 	
-	var code = `Sum_${argument0}: group.deflate(row => row.${argument0}).sum()`
+	var code = `Sum: series => series.sum(),`
     console.log(code)
     return [code, order];
 };

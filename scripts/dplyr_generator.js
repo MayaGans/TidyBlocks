@@ -87,3 +87,21 @@ Blockly.JavaScript['dplyr_summarise'] = function(block) {
   
 };
 
+Blockly.JavaScript['dplyr_summarise2'] = function(block) {
+  
+  // need an if else -- if just one summary stat use 
+  var argument0 =  Blockly.JavaScript.valueToCode(block, 'Columns', Blockly.JavaScript.ORDER_NONE);
+  // otherwise if in an and statement use
+  
+
+  var summariseString = `.select(group => { return { Species: group.first().Species,
+  										 ${argument0},
+                      }}).inflate()`
+                      //.getSeries("Sepal_Length").average());
+  summariseString = summariseString.replace(/["']/g, "")
+  summariseString = summariseString.replace(/&&/g, ",")
+  console.log(summariseString)
+  return summariseString
+  
+};
+
