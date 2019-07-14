@@ -15,7 +15,6 @@
     "data-forge": "^1.7.2",
     "data-forge-plot": "^0.6.2",
     "fs": "0.0.1-security",
-    "lodash": "^4.17.11",
     "mathjs": "^6.0.2",
     "papaparse": "^5.0.0",
     "request-promise": "^4.2.4",
