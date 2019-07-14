@@ -1,182 +1,182 @@
-iso3,Country/areas,year,Total ,age 15-17,age 18-19,age less than 20,age more than 20,age 20-34,age 35-49,Source,Source year,,
-AFG,Afghanistan,2010, 	4 , 	5 , 	3 , 	3 , 	3 , 	3 , 	4 ,MICS,2010,,
-ALB,Albania,2008, 	18 , 	23 , 	10 , 	14 , 	19 , 	19 , 	18 ,DHS,2008,,
-ARG,Argentina,2012, 	43 , 	21 , 	35 , 	29 , 	45 , 	44 , 	50 ,MICS,2012,,
-ARM,Armenia,2000, 	7 , 	-   , 	6 , 	5 , 	7 , 	6 , 	23 ,DHS,2000,,
-ARM,Armenia,2005, 	11 , 	-   , 	-   , 	-   , 	12 , 	10 , 	44 ,DHS,2005,,
-ARM,Armenia,2010, 	15 , 	-   , 	11 , 	9 , 	15 , 	14 , 	37 ,DHS,2010,,
-AZE,Azerbaijan,2006, 	6 , 	4 , 	4 , 	4 , 	6 , 	5 , 	18 ,DHS,2006,,
-BGD,Bangladesh,2004, 	5 , 	4 , 	3 , 	4 , 	5 , 	5 , 	5 ,DHS,2004,,
-BGD,Bangladesh,2007, 	10 , 	6 , 	9 , 	7 , 	11 , 	11 , 	7 ,DHS,2007,,
-BGD,Bangladesh,2011, 	18 , 	12 , 	18 , 	15 , 	19 , 	20 , 	13 ,DHS,2011,,
-BGD,Bangladesh,2013, 	19 , 	20 , 	18 , 	19 , 	19 , 	20 , 	12 ,MICS,2013,,
-BGD,Bangladesh,2014, 	25 , 	22 , 	23 , 	22 , 	26 , 	26 , 	24 ,DHS,2014,,
-BRB,Barbados,2012, 	21 , 	-   , 	-   , 	-   , 	25 , 	24 , 	25 ,MICS,2012,,
-BLR,Belarus,2012, 	25 , 	27 , 	10 , 	14 , 	26 , 	25 , 	38 ,MICS,2012,,
-BLZ,Belize,2011, 	28 , 	30 , 	23 , 	26 , 	29 , 	27 , 	39 ,MICS,2011,,
-BEN,Benin,2001, 	4 , 	3 , 	3 , 	3 , 	4 , 	4 , 	3 ,DHS,2001,,
-BEN,Benin,2006, 	4 , 	3 , 	3 , 	3 , 	4 , 	4 , 	4 ,DHS,2006,,
-BEN,Benin,2011, 	6 , 	6 , 	4 , 	5 , 	6 , 	6 , 	7 ,DHS,2011,,
-BTN,Bhutan,2010, 	12 , 	-   , 	13 , 	12 , 	11 , 	11 , 	14 ,MICS,2010,,
-BOL,Bolivia (Plurinational State of),2003, 	16 , 	17 , 	15 , 	16 , 	16 , 	17 , 	15 ,DHS,2003,,
-BOL,Bolivia (Plurinational State of),2008, 	21 , 	19 , 	17 , 	18 , 	21 , 	21 , 	24 ,DHS,2008,,
-BIH,Bosnia and Herzegovina,2011, 	14 , 	-   , 	6 , 	6 , 	14 , 	14 , 	16 ,MICS,2011,,
-BFA,Burkina Faso,2003, 	1 , 	-   , 	1 , 	1 , 	1 , 	1 , 	1 ,DHS,2003,,
-BFA,Burkina Faso,2010, 	2 , 	-   , 	2 , 	2 , 	2 , 	2 , 	3 ,DHS,2010,,
-BDI,Burundi,2010, 	5 , 	9 , 	8 , 	8 , 	4 , 	4 , 	4 ,DHS,2010,,
-KHM,Cambodia,2000, 	1 , 	2 , 	1 , 	1 , 	1 , 	1 , 	1 ,DHS,2000,,
-KHM,Cambodia,2005, 	2 , 	1 , 	4 , 	3 , 	2 , 	2 , 	2 ,DHS,2005,,
-KHM,Cambodia,2010, 	4 , 	3 , 	5 , 	4 , 	4 , 	4 , 	4 ,DHS,2010,,
-KHM,Cambodia,2014, 	8 , 	1 , 	6 , 	5 , 	8 , 	8 , 	13 ,DHS,2014,,
-CMR,Cameroon,2004, 	2 , 	2 , 	1 , 	2 , 	2 , 	2 , 	3 ,DHS,2004,,
-CMR,Cameroon,2011, 	5 , 	5 , 	4 , 	5 , 	5 , 	5 , 	5 ,DHS,2011,,
-CAF,Central African Republic,2010, 	4 , 	5 , 	3 , 	4 , 	4 , 	4 , 	4 ,MICS,2010,,
-TCD,Chad,2004, 	0 , 	1 , 	1 , 	1 , 	0 , 	0 , 	0 ,DHS,2004,,
-TCD,Chad,2010, 	1 , 	-   , 	1 , 	1 , 	1 , 	1 , 	1 ,MICS,2010,,
-COL,Colombia,2000, 	25 , 	18 , 	21 , 	20 , 	27 , 	26 , 	33 ,DHS,2000,,
-COL,Colombia,2005, 	28 , 	24 , 	19 , 	21 , 	30 , 	29 , 	36 ,DHS,2005,,
-COL,Colombia,2010, 	38 , 	32 , 	31 , 	31 , 	40 , 	39 , 	47 ,DHS,2010,,
-COM,Comoros,2012, 	11 , 	9 , 	7 , 	8 , 	12 , 	12 , 	12 ,DHS,2012,,
-COG,Congo,2005, 	3 , 	4 , 	3 , 	3 , 	3 , 	3 , 	2 ,DHS,2005,,
-COG,Congo,2011, 	7 , 	9 , 	4 , 	6 , 	7 , 	6 , 	11 ,DHS,2011,,
-COD,Democratic Republic of the Congo,2007, 	4 , 	8 , 	4 , 	6 , 	4 , 	4 , 	4 ,DHS,2007,,
-COD,Democratic Republic of the Congo,2010, 	7 , 	13 , 	7 , 	9 , 	7 , 	8 , 	5 ,MICS,2010,,
-COD,Democratic Republic of the Congo,2013, 	5 , 	5 , 	6 , 	6 , 	5 , 	5 , 	5 ,DHS,2013,,
-CRI,Costa Rica,2011, 	26 , 	21 , 	24 , 	23 , 	27 , 	22 , 	55 ,MICS,2011,,
-CIV,Côte d'Ivoire,2011, 	3 , 	2 , 	1 , 	1 , 	3 , 	3 , 	5 ,DHS,2011,,
-CUB,Cuba,2014, 	40 , 	40 , 	26 , 	31 , 	42 , 	41 , 	52 ,MICS,2014,,
-DOM,Dominican Republic,2002, 	34 , 	24 , 	28 , 	26 , 	37 , 	37 , 	37 ,DHS,2002,,
-DOM,Dominican Republic,2007, 	46 , 	40 , 	42 , 	41 , 	47 , 	48 , 	43 ,DHS,2007,,
-DOM,Dominican Republic,2013, 	61 , 	57 , 	52 , 	54 , 	62 , 	62 , 	70 ,DHS,2013,,
-EGY,Egypt,2000, 	12 , 	8 , 	8 , 	8 , 	12 , 	12 , 	13 ,DHS,2000,,
-EGY,Egypt,2003, 	18 , 	8 , 	13 , 	12 , 	18 , 	18 , 	21 ,DHS,2003,,
-EGY,Egypt,2005, 	23 , 	20 , 	16 , 	17 , 	24 , 	23 , 	28 ,DHS,2005,,
-EGY,Egypt,2008, 	31 , 	22 , 	26 , 	25 , 	31 , 	31 , 	35 ,DHS,2008,,
-EGY,Egypt,2014, 	57 , 	57 , 	51 , 	53 , 	58 , 	58 , 	57 ,DHS,2014,,
-ETH,Ethiopia,2000, 	1 , 	2 , 	0 , 	1 , 	1 , 	1 , 	0 ,DHS,2000,,
-ETH,Ethiopia,2005, 	1 , 	1 , 	1 , 	1 , 	1 , 	1 , 	0 ,DHS,2005,,
-ETH,Ethiopia,2011, 	2 , 	1 , 	1 , 	1 , 	2 , 	2 , 	3 ,DHS,2011,,
-GAB,Gabon,2000, 	6 , 	10 , 	5 , 	8 , 	5 , 	5 , 	6 ,DHS,2000,,
-GAB,Gabon,2012, 	11 , 	11 , 	9 , 	10 , 	11 , 	11 , 	9 ,DHS,2012,,
-GMB,Gambia,2013, 	2 , 	2 , 	1 , 	1 , 	2 , 	2 , 	3 ,DHS,2013,,
-GHA,Ghana,2003, 	4 , 	-   , 	6 , 	4 , 	4 , 	3 , 	5 ,DHS,2003,,
-GHA,Ghana,2008, 	6 , 	6 , 	3 , 	4 , 	7 , 	7 , 	6 ,DHS,2008,,
-GHA,Ghana,2011, 	11 , 	12 , 	13 , 	13 , 	10 , 	9 , 	13 ,MICS,2011,,
-GHA,Ghana,2014, 	13 , 	4 , 	5 , 	5 , 	13 , 	12 , 	19 ,DHS,2014,,
-GIN,Guinea,2005, 	2 , 	2 , 	1 , 	2 , 	2 , 	2 , 	1 ,DHS,2005,,
-GIN,Guinea,2012, 	3 , 	3 , 	3 , 	3 , 	3 , 	3 , 	4 ,DHS,2012,,
-GUY,Guyana,2009, 	13 , 	9 , 	9 , 	9 , 	15 , 	15 , 	15 ,DHS,2009,,
-HTI,Haiti,2000, 	2 , 	2 , 	1 , 	1 , 	2 , 	2 , 	2 ,DHS,2000,,
-HTI,Haiti,2005, 	4 , 	1 , 	2 , 	2 , 	4 , 	4 , 	3 ,DHS,2005,,
-HTI,Haiti,2012, 	5 , 	3 , 	4 , 	4 , 	6 , 	5 , 	7 ,DHS,2012,,
-HND,Honduras,2005, 	14 , 	17 , 	11 , 	14 , 	15 , 	15 , 	13 ,DHS,2005,,
-HND,Honduras,2011, 	19 , 	13 , 	15 , 	14 , 	20 , 	20 , 	23 ,DHS,2011,,
-IND,India,2005, 	9 , 	6 , 	7 , 	7 , 	10 , 	10 , 	6 ,DHS,2005,,
-IDN,Indonesia,2002, 	4 , 	1 , 	2 , 	1 , 	5 , 	4 , 	7 ,DHS,2002,,
-IDN,Indonesia,2007, 	8 , 	4 , 	5 , 	5 , 	9 , 	9 , 	8 ,DHS,2007,,
-IDN,Indonesia,2012, 	14 , 	6 , 	4 , 	5 , 	15 , 	14 , 	17 ,DHS,2012,,
-IRQ,Iraq,2011, 	22 , 	21 , 	12 , 	14 , 	21 , 	19 , 	28 ,MICS,2011,,
-JAM,Jamaica,2011, 	21 , 	14 , 	15 , 	14 , 	23 , 	21 , 	30 ,MICS,2011,,
-JOR,Jordan,2002, 	17 , 	5 , 	14 , 	12 , 	17 , 	16 , 	26 ,DHS,2002,,
-JOR,Jordan,2007, 	19 , 	28 , 	9 , 	14 , 	20 , 	17 , 	32 ,DHS,2007,,
-JOR,Jordan,2012, 	30 , 	24 , 	26 , 	25 , 	30 , 	28 , 	40 ,DHS,2012,,
-KAZ,Kazakhstan,2010, 	16 , 	-   , 	20 , 	18 , 	13 , 	12 , 	18 ,MICS,2010,,
-KEN,Kenya,2003, 	4 , 	2 , 	5 , 	4 , 	4 , 	4 , 	3 ,DHS,2003,,
-KEN,Kenya,2008, 	7 , 	11 , 	3 , 	7 , 	7 , 	7 , 	6 ,DHS,2008,,
-KEN,Kenya,2014, 	9 , 	6 , 	7 , 	7 , 	9 , 	9 , 	11 ,DHS,2014,,
-KGZ,Kyrgyzstan,2012, 	7 , 	-   , 	7 , 	6 , 	7 , 	6 , 	15 ,DHS,2012,,
-KGZ,Kyrgyzstan,2014, 	8 , 	2 , 	7 , 	6 , 	8 , 	7 , 	13 ,MICS,2014,,
-LAO,Lao People's Democratic Republic,2011, 	4 , 	1 , 	2 , 	2 , 	4 , 	4 , 	5 ,MICS,2011,,
-LSO,Lesotho,2004, 	5 , 	7 , 	4 , 	5 , 	5 , 	5 , 	7 ,DHS,2004,,
-LSO,Lesotho,2009, 	8 , 	6 , 	8 , 	7 , 	8 , 	8 , 	6 ,DHS,2009,,
-LBR,Liberia,2007, 	4 , 	4 , 	3 , 	3 , 	4 , 	4 , 	6 ,DHS,2007,,
-LBR,Liberia,2013, 	4 , 	6 , 	4 , 	5 , 	4 , 	5 , 	3 ,DHS,2013,,
-MKD,The former Yugoslav Republic of Macedonia,2011, 	25 , 	13 , 	3 , 	5 , 	26 , 	25 , 	34 ,MICS,2011,,
-MDG,Madagascar,2003, 	1 , 	1 , 	1 , 	1 , 	1 , 	1 , 	0 ,DHS,2003,,
-MDG,Madagascar,2008, 	2 , 	2 , 	2 , 	2 , 	1 , 	2 , 	1 ,DHS,2008,,
-MWI,Malawi,2000, 	3 , 	4 , 	2 , 	3 , 	3 , 	3 , 	3 ,DHS,2000,,
-MWI,Malawi,2004, 	3 , 	4 , 	4 , 	4 , 	3 , 	3 , 	2 ,DHS,2004,,
-MWI,Malawi,2010, 	5 , 	6 , 	7 , 	7 , 	4 , 	5 , 	4 ,DHS,2010,,
-MWI,Malawi,2013, 	5 , 	8 , 	5 , 	6 , 	5 , 	5 , 	4 ,MICS,2013,,
-MDV,Maldives,2009, 	37 , 	58 , 	35 , 	38 , 	37 , 	38 , 	34 ,DHS,2009,,
-MLI,Mali,2001, 	1 , 	1 , 	1 , 	1 , 	1 , 	1 , 	1 ,DHS,2001,,
-MLI,Mali,2006, 	2 , 	2 , 	2 , 	2 , 	2 , 	2 , 	2 ,DHS,2006,,
-MLI,Mali,2012, 	3 , 	4 , 	3 , 	3 , 	3 , 	3 , 	4 ,DHS,2012,,
-MRT,Mauritania,2011, 	10 , 	5 , 	4 , 	4 , 	9 , 	10 , 	7 ,MICS,2011,,
-MDA,Republic of Moldova,2005, 	8 , 	12 , 	8 , 	9 , 	8 , 	8 , 	10 ,DHS,2005,,
-MDA,Republic of Moldova,2012, 	16 , 	-   , 	26 , 	26 , 	17 , 	16 , 	26 ,MICS,2012,,
-MNG,Mongolia,2010, 	21 , 	-   , 	34 , 	26 , 	20 , 	17 , 	33 ,MICS,2010,,
-MNE,Montenegro,2013, 	20 , 	12 , 	11 , 	12 , 	20 , 	18 , 	35 ,MICS,2013,,
-MAR,Morocco,2003, 	6 , 	6 , 	1 , 	2 , 	6 , 	6 , 	8 ,DHS,2003,,
-MOZ,Mozambique,2003, 	2 , 	2 , 	2 , 	2 , 	2 , 	2 , 	2 ,DHS,2003,,
-MOZ,Mozambique,2011, 	4 , 	5 , 	5 , 	5 , 	4 , 	4 , 	4 ,DHS,2011,,
-NAM,Namibia,2000, 	-   , 	-   , 	-   , 	-   , 	-   , 	-   , 	-   ,DHS,2000,,
-NAM,Namibia,2006, 	12 , 	7 , 	7 , 	7 , 	14 , 	13 , 	16 ,DHS,2006,,
-NAM,Namibia,2013, 	16 , 	14 , 	14 , 	14 , 	16 , 	15 , 	19 ,DHS,2013,,
-NPL,Nepal,2001, 	1 , 	-   , 	1 , 	0 , 	1 , 	1 , 	0 ,DHS,2001,,
-NPL,Nepal,2006, 	3 , 	5 , 	2 , 	3 , 	3 , 	3 , 	1 ,DHS,2006,,
-NPL,Nepal,2011, 	6 , 	4 , 	3 , 	3 , 	6 , 	6 , 	7 ,DHS,2011,,
-NPL,Nepal,2014, 	9 , 	-   , 	6 , 	4 , 	10 , 	10 , 	9 ,MICS,2014,,
-NIC,Nicaragua,2001, 	16 , 	15 , 	20 , 	17 , 	16 , 	16 , 	11 ,DHS,2001,,
-NER,Niger,2006, 	1 , 	1 , 	1 , 	1 , 	1 , 	1 , 	1 ,DHS,2006,,
-NER,Niger,2012, 	1 , 	1 , 	2 , 	2 , 	1 , 	1 , 	2 ,DHS,2012,,
-NGA,Nigeria,2003, 	1 , 	1 , 	1 , 	1 , 	1 , 	1 , 	1 ,DHS,2003,,
-NGA,Nigeria,2008, 	2 , 	0 , 	1 , 	1 , 	2 , 	2 , 	2 ,DHS,2008,,
-NGA,Nigeria,2011, 	5 , 	2 , 	3 , 	2 , 	5 , 	5 , 	5 ,MICS,2011,,
-NGA,Nigeria,2013, 	2 , 	1 , 	1 , 	1 , 	2 , 	2 , 	3 ,DHS,2013,,
-PAK,Pakistan,2006, 	9 , 	8 , 	9 , 	8 , 	9 , 	10 , 	6 ,DHS,2006,,
-PAK,Pakistan,2012, 	17 , 	19 , 	13 , 	14 , 	17 , 	18 , 	11 ,DHS,2012,,
-PSE,State of Palestine,2014, 	20 , 	18 , 	19 , 	18 , 	23 , 	22 , 	40 ,MICS,2014,,
-PAN,Panama,2013, 	28 , 	6 , 	15 , 	11 , 	31 , 	29 , 	44 ,MICS,2013,,
-PER,Peru,2000, 	13 , 	7 , 	9 , 	9 , 	14 , 	12 , 	20 ,DHS,2000,,
-PER,Peru,2004, 	19 , 	13 , 	14 , 	14 , 	20 , 	20 , 	24 ,DHS,2004,,
-PER,Peru,2009, 	24 , 	18 , 	16 , 	17 , 	25 , 	23 , 	31 ,DHS,2009,,
-PER,Peru,2010, 	20 , 	12 , 	15 , 	14 , 	21 , 	21 , 	22 ,DHS,2010,,
-PER,Peru,2011, 	24 , 	13 , 	12 , 	12 , 	27 , 	25 , 	33 ,DHS,2011,,
-PER,Peru,2012, 	29 , 	22 , 	24 , 	23 , 	30 , 	30 , 	30 ,DHS,2012,,
-PHL,Philippines,2003, 	8 , 	3 , 	5 , 	5 , 	8 , 	8 , 	11 ,DHS,2003,,
-PHL,Philippines,2008, 	11 , 	5 , 	5 , 	5 , 	11 , 	12 , 	11 ,DHS,2008,,
-PHL,Philippines,2013, 	11 , 	2 , 	8 , 	6 , 	11 , 	10 , 	16 ,DHS,2013,,
-RWA,Rwanda,2000, 	2 , 	1 , 	4 , 	3 , 	2 , 	3 , 	2 ,DHS,2000,,
-RWA,Rwanda,2005, 	3 , 	9 , 	5 , 	6 , 	3 , 	3 , 	3 ,DHS,2005,,
-RWA,Rwanda,2010, 	9 , 	16 , 	10 , 	11 , 	9 , 	9 , 	6 ,DHS,2010,,
-LCA,Saint Lucia,2012, 	19 , 	100 , 	11 , 	14 , 	19 , 	16 , 	42 ,MICS,2012,,
-STP,Sao Tome and Principe,2008, 	6 , 	4 , 	7 , 	6 , 	6 , 	7 , 	6 ,DHS,2008,,
-SEN,Senegal,2005, 	4 , 	3 , 	2 , 	3 , 	4 , 	4 , 	4 ,DHS,2005,,
-SEN,Senegal,2010, 	5 , 	5 , 	7 , 	6 , 	5 , 	4 , 	5 ,DHS,2010,,
-SEN,Senegal,2012, 	3 , 	1 , 	1 , 	1 , 	4 , 	3 , 	8 ,DHS,2012,,
-SEN,Senegal,2014, 	6 , 	15 , 	5 , 	9 , 	5 , 	6 , 	3 ,DHS,2014,,
-SRB,Serbia,2010, 	25 , 	46 , 	25 , 	33 , 	24 , 	22 , 	38 ,MICS,2010,,
-SRB,Serbia,2014, 	29 , 	35 , 	9 , 	14 , 	30 , 	29 , 	37 ,MICS,2014,,
-SLE,Sierra Leone,2008, 	2 , 	1 , 	1 , 	1 , 	2 , 	2 , 	1 ,DHS,2008,,
-SLE,Sierra Leone,2010, 	4 , 	13 , 	3 , 	6 , 	4 , 	4 , 	4 ,MICS,2010,,
-SLE,Sierra Leone,2013, 	4 , 	4 , 	2 , 	3 , 	4 , 	4 , 	5 ,DHS,2013,,
-SSD,South Sudan,2010, 	1 , 	1 , 	2 , 	2 , 	0 , 	0 , 	0 ,MICS,2010,,
-SDN,Sudan,2010, 	7 , 	1 , 	6 , 	4 , 	7 , 	7 , 	7 ,MICS,2010,,
-SUR,Suriname,2010, 	19 , 	7 , 	12 , 	10 , 	21 , 	19 , 	30 ,MICS,2010,,
-SWZ,Swaziland,2006, 	8 , 	9 , 	6 , 	7 , 	8 , 	7 , 	15 ,DHS,2006,,
-SWZ,Swaziland,2010, 	12 , 	-   , 	8 , 	8 , 	11 , 	11 , 	12 ,MICS,2010,,
-TJK,Tajikistan,2012, 	5 , 	-   , 	3 , 	3 , 	5 , 	5 , 	6 ,DHS,2012,,
-TZA,United Republic of Tanzania,2004, 	3 , 	3 , 	4 , 	4 , 	3 , 	4 , 	2 ,DHS,2004,,
-TZA,United Republic of Tanzania,2010, 	5 , 	8 , 	2 , 	4 , 	5 , 	6 , 	4 ,DHS,2010,,
-TLS,Timor-Leste,2009, 	2 , 	2 , 	1 , 	2 , 	2 , 	2 , 	2 ,DHS,2009,,
-TGO,Togo,2010, 	9 , 	13 , 	6 , 	7 , 	7 , 	7 , 	9 ,MICS,2010,,
-TGO,Togo,2013, 	7 , 	8 , 	6 , 	6 , 	8 , 	8 , 	7 ,DHS,2013,,
-TUN,Tunisia,2011, 	27 , 	-   , 	-   , 	-   , 	27 , 	27 , 	28 ,MICS,2011,,
-TUR,Turkey,2003, 	25 , 	11 , 	22 , 	19 , 	26 , 	26 , 	22 ,DHS,2003,,
-UGA,Uganda,2000, 	3 , 	5 , 	5 , 	5 , 	2 , 	3 , 	1 ,DHS,2000,,
-UGA,Uganda,2006, 	3 , 	3 , 	6 , 	5 , 	2 , 	3 , 	1 ,DHS,2006,,
-UGA,Uganda,2011, 	6 , 	5 , 	6 , 	6 , 	5 , 	5 , 	7 ,DHS,2011,,
-UKR,Ukraine,2007, 	12 , 	9 , 	11 , 	10 , 	12 , 	12 , 	13 ,DHS,2007,,
-UKR,Ukraine,2012, 	12 , 	2 , 	6 , 	5 , 	13 , 	12 , 	17 ,MICS,2012,,
-URY,Uruguay,2012, 	30 , 	44 , 	7 , 	10 , 	38 , 	37 , 	50 ,MICS,2012,,
-VNM,Viet Nam,2002, 	10 , 	17 , 	3 , 	5 , 	11 , 	9 , 	28 ,DHS,2002,,
-VNM,Viet Nam,2010, 	20 , 	-   , 	-   , 	-   , 	17 , 	16 , 	27 ,MICS,2010,,
-VNM,Viet Nam,2013, 	28 , 	19 , 	15 , 	16 , 	29 , 	27 , 	40 ,MICS,2013,,
-YEM,Yemen,2013, 	6 , 	3 , 	5 , 	5 , 	6 , 	6 , 	6 ,DHS,2013,,
-ZMB,Zambia,2001, 	2 , 	2 , 	2 , 	2 , 	2 , 	2 , 	2 ,DHS,2001,,
-ZMB,Zambia,2007, 	3 , 	2 , 	4 , 	3 , 	3 , 	3 , 	2 ,DHS,2007,,
-ZMB,Zambia,2013, 	5 , 	8 , 	5 , 	6 , 	4 , 	4 , 	4 ,DHS,2013,,
-ZWE,Zimbabwe,2005, 	5 , 	2 , 	3 , 	3 , 	5 , 	5 , 	8 ,DHS,2005,,
-ZWE,Zimbabwe,2010, 	5 , 	3 , 	4 , 	3 , 	5 , 	5 , 	7 ,DHS,2010,,
-ZWE,Zimbabwe,2014, 	6 , 	4 , 	5 , 	5 , 	6 , 	6 , 	10 ,MICS,2014,,
+﻿iso3,Country/areas,year,Total,age 15-17,age 18-19,age less than 20,age more than 20,age 20-34,age 35-49,Source,Source year
+AFG,Afghanistan,2010,4,5,3,3,3,3,4,MICS,2010
+ALB,Albania,2008,18,23,10,14,19,19,18,DHS,2008
+ARG,Argentina,2012,43,21,35,29,45,44,50,MICS,2012
+ARM,Armenia,2000,7,-,6,5,7,6,23,DHS,2000
+ARM,Armenia,2005,11,-,-,-,12,10,44,DHS,2005
+ARM,Armenia,2010,15,-,11,9,15,14,37,DHS,2010
+AZE,Azerbaijan,2006,6,4,4,4,6,5,18,DHS,2006
+BGD,Bangladesh,2004,5,4,3,4,5,5,5,DHS,2004
+BGD,Bangladesh,2007,10,6,9,7,11,11,7,DHS,2007
+BGD,Bangladesh,2011,18,12,18,15,19,20,13,DHS,2011
+BGD,Bangladesh,2013,19,20,18,19,19,20,12,MICS,2013
+BGD,Bangladesh,2014,25,22,23,22,26,26,24,DHS,2014
+BRB,Barbados,2012,21,-,-,-,25,24,25,MICS,2012
+BLR,Belarus,2012,25,27,10,14,26,25,38,MICS,2012
+BLZ,Belize,2011,28,30,23,26,29,27,39,MICS,2011
+BEN,Benin,2001,4,3,3,3,4,4,3,DHS,2001
+BEN,Benin,2006,4,3,3,3,4,4,4,DHS,2006
+BEN,Benin,2011,6,6,4,5,6,6,7,DHS,2011
+BTN,Bhutan,2010,12,-,13,12,11,11,14,MICS,2010
+BOL,Bolivia (Plurinational State of),2003,16,17,15,16,16,17,15,DHS,2003
+BOL,Bolivia (Plurinational State of),2008,21,19,17,18,21,21,24,DHS,2008
+BIH,Bosnia and Herzegovina,2011,14,-,6,6,14,14,16,MICS,2011
+BFA,Burkina Faso,2003,1,-,1,1,1,1,1,DHS,2003
+BFA,Burkina Faso,2010,2,-,2,2,2,2,3,DHS,2010
+BDI,Burundi,2010,5,9,8,8,4,4,4,DHS,2010
+KHM,Cambodia,2000,1,2,1,1,1,1,1,DHS,2000
+KHM,Cambodia,2005,2,1,4,3,2,2,2,DHS,2005
+KHM,Cambodia,2010,4,3,5,4,4,4,4,DHS,2010
+KHM,Cambodia,2014,8,1,6,5,8,8,13,DHS,2014
+CMR,Cameroon,2004,2,2,1,2,2,2,3,DHS,2004
+CMR,Cameroon,2011,5,5,4,5,5,5,5,DHS,2011
+CAF,Central African Republic,2010,4,5,3,4,4,4,4,MICS,2010
+TCD,Chad,2004,0,1,1,1,0,0,0,DHS,2004
+TCD,Chad,2010,1,-,1,1,1,1,1,MICS,2010
+COL,Colombia,2000,25,18,21,20,27,26,33,DHS,2000
+COL,Colombia,2005,28,24,19,21,30,29,36,DHS,2005
+COL,Colombia,2010,38,32,31,31,40,39,47,DHS,2010
+COM,Comoros,2012,11,9,7,8,12,12,12,DHS,2012
+COG,Congo,2005,3,4,3,3,3,3,2,DHS,2005
+COG,Congo,2011,7,9,4,6,7,6,11,DHS,2011
+COD,Democratic Republic of the Congo,2007,4,8,4,6,4,4,4,DHS,2007
+COD,Democratic Republic of the Congo,2010,7,13,7,9,7,8,5,MICS,2010
+COD,Democratic Republic of the Congo,2013,5,5,6,6,5,5,5,DHS,2013
+CRI,Costa Rica,2011,26,21,24,23,27,22,55,MICS,2011
+CIV,Côte d'Ivoire,2011,3,2,1,1,3,3,5,DHS,2011
+CUB,Cuba,2014,40,40,26,31,42,41,52,MICS,2014
+DOM,Dominican Republic,2002,34,24,28,26,37,37,37,DHS,2002
+DOM,Dominican Republic,2007,46,40,42,41,47,48,43,DHS,2007
+DOM,Dominican Republic,2013,61,57,52,54,62,62,70,DHS,2013
+EGY,Egypt,2000,12,8,8,8,12,12,13,DHS,2000
+EGY,Egypt,2003,18,8,13,12,18,18,21,DHS,2003
+EGY,Egypt,2005,23,20,16,17,24,23,28,DHS,2005
+EGY,Egypt,2008,31,22,26,25,31,31,35,DHS,2008
+EGY,Egypt,2014,57,57,51,53,58,58,57,DHS,2014
+ETH,Ethiopia,2000,1,2,0,1,1,1,0,DHS,2000
+ETH,Ethiopia,2005,1,1,1,1,1,1,0,DHS,2005
+ETH,Ethiopia,2011,2,1,1,1,2,2,3,DHS,2011
+GAB,Gabon,2000,6,10,5,8,5,5,6,DHS,2000
+GAB,Gabon,2012,11,11,9,10,11,11,9,DHS,2012
+GMB,Gambia,2013,2,2,1,1,2,2,3,DHS,2013
+GHA,Ghana,2003,4,-,6,4,4,3,5,DHS,2003
+GHA,Ghana,2008,6,6,3,4,7,7,6,DHS,2008
+GHA,Ghana,2011,11,12,13,13,10,9,13,MICS,2011
+GHA,Ghana,2014,13,4,5,5,13,12,19,DHS,2014
+GIN,Guinea,2005,2,2,1,2,2,2,1,DHS,2005
+GIN,Guinea,2012,3,3,3,3,3,3,4,DHS,2012
+GUY,Guyana,2009,13,9,9,9,15,15,15,DHS,2009
+HTI,Haiti,2000,2,2,1,1,2,2,2,DHS,2000
+HTI,Haiti,2005,4,1,2,2,4,4,3,DHS,2005
+HTI,Haiti,2012,5,3,4,4,6,5,7,DHS,2012
+HND,Honduras,2005,14,17,11,14,15,15,13,DHS,2005
+HND,Honduras,2011,19,13,15,14,20,20,23,DHS,2011
+IND,India,2005,9,6,7,7,10,10,6,DHS,2005
+IDN,Indonesia,2002,4,1,2,1,5,4,7,DHS,2002
+IDN,Indonesia,2007,8,4,5,5,9,9,8,DHS,2007
+IDN,Indonesia,2012,14,6,4,5,15,14,17,DHS,2012
+IRQ,Iraq,2011,22,21,12,14,21,19,28,MICS,2011
+JAM,Jamaica,2011,21,14,15,14,23,21,30,MICS,2011
+JOR,Jordan,2002,17,5,14,12,17,16,26,DHS,2002
+JOR,Jordan,2007,19,28,9,14,20,17,32,DHS,2007
+JOR,Jordan,2012,30,24,26,25,30,28,40,DHS,2012
+KAZ,Kazakhstan,2010,16,-,20,18,13,12,18,MICS,2010
+KEN,Kenya,2003,4,2,5,4,4,4,3,DHS,2003
+KEN,Kenya,2008,7,11,3,7,7,7,6,DHS,2008
+KEN,Kenya,2014,9,6,7,7,9,9,11,DHS,2014
+KGZ,Kyrgyzstan,2012,7,-,7,6,7,6,15,DHS,2012
+KGZ,Kyrgyzstan,2014,8,2,7,6,8,7,13,MICS,2014
+LAO,Lao People's Democratic Republic,2011,4,1,2,2,4,4,5,MICS,2011
+LSO,Lesotho,2004,5,7,4,5,5,5,7,DHS,2004
+LSO,Lesotho,2009,8,6,8,7,8,8,6,DHS,2009
+LBR,Liberia,2007,4,4,3,3,4,4,6,DHS,2007
+LBR,Liberia,2013,4,6,4,5,4,5,3,DHS,2013
+MKD,The former Yugoslav Republic of Macedonia,2011,25,13,3,5,26,25,34,MICS,2011
+MDG,Madagascar,2003,1,1,1,1,1,1,0,DHS,2003
+MDG,Madagascar,2008,2,2,2,2,1,2,1,DHS,2008
+MWI,Malawi,2000,3,4,2,3,3,3,3,DHS,2000
+MWI,Malawi,2004,3,4,4,4,3,3,2,DHS,2004
+MWI,Malawi,2010,5,6,7,7,4,5,4,DHS,2010
+MWI,Malawi,2013,5,8,5,6,5,5,4,MICS,2013
+MDV,Maldives,2009,37,58,35,38,37,38,34,DHS,2009
+MLI,Mali,2001,1,1,1,1,1,1,1,DHS,2001
+MLI,Mali,2006,2,2,2,2,2,2,2,DHS,2006
+MLI,Mali,2012,3,4,3,3,3,3,4,DHS,2012
+MRT,Mauritania,2011,10,5,4,4,9,10,7,MICS,2011
+MDA,Republic of Moldova,2005,8,12,8,9,8,8,10,DHS,2005
+MDA,Republic of Moldova,2012,16,-,26,26,17,16,26,MICS,2012
+MNG,Mongolia,2010,21,-,34,26,20,17,33,MICS,2010
+MNE,Montenegro,2013,20,12,11,12,20,18,35,MICS,2013
+MAR,Morocco,2003,6,6,1,2,6,6,8,DHS,2003
+MOZ,Mozambique,2003,2,2,2,2,2,2,2,DHS,2003
+MOZ,Mozambique,2011,4,5,5,5,4,4,4,DHS,2011
+NAM,Namibia,2000,-,-,-,-,-,-,-,DHS,2000
+NAM,Namibia,2006,12,7,7,7,14,13,16,DHS,2006
+NAM,Namibia,2013,16,14,14,14,16,15,19,DHS,2013
+NPL,Nepal,2001,1,-,1,0,1,1,0,DHS,2001
+NPL,Nepal,2006,3,5,2,3,3,3,1,DHS,2006
+NPL,Nepal,2011,6,4,3,3,6,6,7,DHS,2011
+NPL,Nepal,2014,9,-,6,4,10,10,9,MICS,2014
+NIC,Nicaragua,2001,16,15,20,17,16,16,11,DHS,2001
+NER,Niger,2006,1,1,1,1,1,1,1,DHS,2006
+NER,Niger,2012,1,1,2,2,1,1,2,DHS,2012
+NGA,Nigeria,2003,1,1,1,1,1,1,1,DHS,2003
+NGA,Nigeria,2008,2,0,1,1,2,2,2,DHS,2008
+NGA,Nigeria,2011,5,2,3,2,5,5,5,MICS,2011
+NGA,Nigeria,2013,2,1,1,1,2,2,3,DHS,2013
+PAK,Pakistan,2006,9,8,9,8,9,10,6,DHS,2006
+PAK,Pakistan,2012,17,19,13,14,17,18,11,DHS,2012
+PSE,State of Palestine,2014,20,18,19,18,23,22,40,MICS,2014
+PAN,Panama,2013,28,6,15,11,31,29,44,MICS,2013
+PER,Peru,2000,13,7,9,9,14,12,20,DHS,2000
+PER,Peru,2004,19,13,14,14,20,20,24,DHS,2004
+PER,Peru,2009,24,18,16,17,25,23,31,DHS,2009
+PER,Peru,2010,20,12,15,14,21,21,22,DHS,2010
+PER,Peru,2011,24,13,12,12,27,25,33,DHS,2011
+PER,Peru,2012,29,22,24,23,30,30,30,DHS,2012
+PHL,Philippines,2003,8,3,5,5,8,8,11,DHS,2003
+PHL,Philippines,2008,11,5,5,5,11,12,11,DHS,2008
+PHL,Philippines,2013,11,2,8,6,11,10,16,DHS,2013
+RWA,Rwanda,2000,2,1,4,3,2,3,2,DHS,2000
+RWA,Rwanda,2005,3,9,5,6,3,3,3,DHS,2005
+RWA,Rwanda,2010,9,16,10,11,9,9,6,DHS,2010
+LCA,Saint Lucia,2012,19,100,11,14,19,16,42,MICS,2012
+STP,Sao Tome and Principe,2008,6,4,7,6,6,7,6,DHS,2008
+SEN,Senegal,2005,4,3,2,3,4,4,4,DHS,2005
+SEN,Senegal,2010,5,5,7,6,5,4,5,DHS,2010
+SEN,Senegal,2012,3,1,1,1,4,3,8,DHS,2012
+SEN,Senegal,2014,6,15,5,9,5,6,3,DHS,2014
+SRB,Serbia,2010,25,46,25,33,24,22,38,MICS,2010
+SRB,Serbia,2014,29,35,9,14,30,29,37,MICS,2014
+SLE,Sierra Leone,2008,2,1,1,1,2,2,1,DHS,2008
+SLE,Sierra Leone,2010,4,13,3,6,4,4,4,MICS,2010
+SLE,Sierra Leone,2013,4,4,2,3,4,4,5,DHS,2013
+SSD,South Sudan,2010,1,1,2,2,0,0,0,MICS,2010
+SDN,Sudan,2010,7,1,6,4,7,7,7,MICS,2010
+SUR,Suriname,2010,19,7,12,10,21,19,30,MICS,2010
+SWZ,Swaziland,2006,8,9,6,7,8,7,15,DHS,2006
+SWZ,Swaziland,2010,12,-,8,8,11,11,12,MICS,2010
+TJK,Tajikistan,2012,5,-,3,3,5,5,6,DHS,2012
+TZA,United Republic of Tanzania,2004,3,3,4,4,3,4,2,DHS,2004
+TZA,United Republic of Tanzania,2010,5,8,2,4,5,6,4,DHS,2010
+TLS,Timor-Leste,2009,2,2,1,2,2,2,2,DHS,2009
+TGO,Togo,2010,9,13,6,7,7,7,9,MICS,2010
+TGO,Togo,2013,7,8,6,6,8,8,7,DHS,2013
+TUN,Tunisia,2011,27,-,-,-,27,27,28,MICS,2011
+TUR,Turkey,2003,25,11,22,19,26,26,22,DHS,2003
+UGA,Uganda,2000,3,5,5,5,2,3,1,DHS,2000
+UGA,Uganda,2006,3,3,6,5,2,3,1,DHS,2006
+UGA,Uganda,2011,6,5,6,6,5,5,7,DHS,2011
+UKR,Ukraine,2007,12,9,11,10,12,12,13,DHS,2007
+UKR,Ukraine,2012,12,2,6,5,13,12,17,MICS,2012
+URY,Uruguay,2012,30,44,7,10,38,37,50,MICS,2012
+VNM,Viet Nam,2002,10,17,3,5,11,9,28,DHS,2002
+VNM,Viet Nam,2010,20,-,-,-,17,16,27,MICS,2010
+VNM,Viet Nam,2013,28,19,15,16,29,27,40,MICS,2013
+YEM,Yemen,2013,6,3,5,5,6,6,6,DHS,2013
+ZMB,Zambia,2001,2,2,2,2,2,2,2,DHS,2001
+ZMB,Zambia,2007,3,2,4,3,3,3,2,DHS,2007
+ZMB,Zambia,2013,5,8,5,6,4,4,4,DHS,2013
+ZWE,Zimbabwe,2005,5,2,3,3,5,5,8,DHS,2005
+ZWE,Zimbabwe,2010,5,3,4,3,5,5,7,DHS,2010
+ZWE,Zimbabwe,2014,6,4,5,5,6,6,10,MICS,2014
