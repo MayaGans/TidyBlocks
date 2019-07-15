@@ -18,7 +18,6 @@ Blockly.JavaScript['ggplot_histogram'] = function(block) {
     }
   }
   vegaEmbed("#plotOutput", spec, {})`
-
   return histogram
 };
 

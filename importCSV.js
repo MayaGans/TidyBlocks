@@ -15,7 +15,6 @@ var readCSV = function(my_url) {
    }
    df = result.data
    data = new dataForge.DataFrame(df)
-   console.log(data)
    return data
 }
 

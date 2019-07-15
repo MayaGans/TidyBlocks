@@ -27,15 +27,15 @@ Blockly.JavaScript['dplyr_groupby'] = function(block) {
       Blockly.JavaScript.ORDER_NONE);
 
 
-    var groupbyString = `.groupBy(row => row["${argument0}"]).selectMany(group => group).inflate();`
-	 groupbyString = groupbyString.replace(/&&/g, "+")
+    var groupbyString = `.groupBy(row => [${argument0}])`
+   groupbyString = groupbyString.replace(/&&/g, "+")
+   groupbyString = groupbyString.replace(/["']/g, "")
 	 
 	 console.log(groupbyString)
   return groupbyString
 };
 
 //var output = groupBy(...).selectMany(group -> group).inflate();
-
 
 // we can only select a single column 
 Blockly.JavaScript['dplyr_select'] = function(block) {
@@ -70,24 +70,6 @@ Blockly.JavaScript['dplyr_mutate'] = function(block) {
 
 
 Blockly.JavaScript['dplyr_summarise'] = function(block) {
-  
-  // need an if else -- if just one summary stat use 
-  var argument0 =  Blockly.JavaScript.valueToCode(block, 'Columns', Blockly.JavaScript.ORDER_NONE);
-  // otherwise if in an and statement use
-  
-
-  var summariseString = `.select(group => { return { Species: group.first().Species,
-  										 ${argument0},
-                      }}).inflate()`
-                      //.getSeries("Sepal_Length").average());
-  summariseString = summariseString.replace(/["']/g, "")
-  summariseString = summariseString.replace(/&&/g, ",")
-  console.log(summariseString)
-  return summariseString
-  
-};
-
-Blockly.JavaScript['dplyr_summarise2'] = function(block) {
   
   // need an if else -- if just one summary stat use 
   var argument0 =  Blockly.JavaScript.valueToCode(block, 'Columns', Blockly.JavaScript.ORDER_NONE);

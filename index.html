@@ -320,16 +320,13 @@ var iris = new dataForge.DataFrame(
       Blockly.JavaScript.INFINITE_LOOP_TRAP = null;
       var code = Blockly.JavaScript.workspaceToCode(demoWorkspace);
       if (code.includes("vega")) {
-        df = code.split("SPLIT", 2)
-        const dfArray = eval(df[0]).toArray()
+        splitdf = code.split("SPLIT", 2)
+        console.log(splitdf)
+        const dfArray = eval(splitdf[0]).toArray()
         console.log(dfArray)
-        eval(df[1])
-      } else if (code.includes("readCSV")) {
-        dfArray = eval(code).toArray()
-        document.getElementById('dataTableOutput').innerHTML = json2table(dfArray);
+        eval(splitdf[1])
       } else {
         dfArray = eval(code).toArray()
-        console.log(dfArray)
         document.getElementById('dataTableOutput').innerHTML = json2table(dfArray);
       }
       
