@@ -26,7 +26,6 @@ Blockly.JavaScript['dplyr_groupby'] = function(block) {
   var argument0 = Blockly.JavaScript.valueToCode(block, 'Columns',
       Blockly.JavaScript.ORDER_NONE);
 
-
     var groupbyString = `.groupBy(row => [${argument0}])`
    groupbyString = groupbyString.replace(/&&/g, "+")
    groupbyString = groupbyString.replace(/["']/g, "")
@@ -84,6 +83,22 @@ Blockly.JavaScript['dplyr_summarise'] = function(block) {
   summariseString = summariseString.replace(/&&/g, ",")
   console.log(summariseString)
   return summariseString
+  
+};
+
+Blockly.JavaScript['dplyr_summarise2'] = function(block) {
+  
+  // getParentBlock
+  var attachedBlock = this.getPreviousBlock("Columns")
+  var txt = attachedBlock.getFieldValue("Columns")
+
+  
+
+  console.log(attachedBlock)
+  console.log(txt)
+
+  // is it a dplyr_groupBy 
+  // get the groupBy field
   
 };
 

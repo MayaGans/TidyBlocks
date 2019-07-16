@@ -14,7 +14,7 @@ var readCSV = function(my_url) {
      })
    }
    df = result.data
-   data = new dataForge.DataFrame(df)
+   data = new TidyBlocksDF(df)
    return data
 }
 
