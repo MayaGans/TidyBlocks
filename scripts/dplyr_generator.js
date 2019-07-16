@@ -29,9 +29,19 @@ Blockly.JavaScript['dplyr_groupby'] = function(block) {
     var groupbyString = `.groupBy(row => [${argument0}])`
    groupbyString = groupbyString.replace(/&&/g, "+")
    groupbyString = groupbyString.replace(/["']/g, "")
-	 
-	 console.log(groupbyString)
+	
   return groupbyString
+};
+
+Blockly.JavaScript['dplyr_groupby2'] = function(block) {
+
+  var argument0 = Blockly.JavaScript.valueToCode(block, 'Columns',
+      Blockly.JavaScript.ORDER_NONE);
+
+    var groupString = `.MyGroupBy(${argument0})`
+	 
+	console.log(groupString)
+  return groupString
 };
 
 //var output = groupBy(...).selectMany(group -> group).inflate();
@@ -87,18 +97,19 @@ Blockly.JavaScript['dplyr_summarise'] = function(block) {
 };
 
 Blockly.JavaScript['dplyr_summarise2'] = function(block) {
+   
+  var argument0 =  Blockly.JavaScript.valueToCode(block, 'Columns', Blockly.JavaScript.ORDER_NONE);
+
+    var previous = this.getPreviousBlock();
+    var inputBlock = previous.getInputTargetBlock('Columns');
   
-  // getParentBlock
-  var attachedBlock = this.getPreviousBlock("Columns")
-  var txt = attachedBlock.getFieldValue("Columns")
-
-  
-
-  console.log(attachedBlock)
-  console.log(txt)
-
-  // is it a dplyr_groupBy 
-  // get the groupBy field
+    var summariseString = `.select(group => { return { ${inputBlock}: group.first().${inputBlock},
+      ${argument0},
+     }}).inflate()`
+summariseString = summariseString.replace(/["']/g, "")
+summariseString = summariseString.replace(/&&/g, ",")
+console.log(summariseString)
+return summariseString
   
 };
 

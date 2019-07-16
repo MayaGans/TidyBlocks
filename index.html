@@ -182,6 +182,7 @@ button {
     
     <block type="dplyr_summarise"></block>
     <block type="dplyr_summarise2"></block>
+    <block type="dplyr_groupby2"></block>
     
   </category>
   
@@ -338,7 +339,7 @@ var iris = new TidyBlocksDF(
     }
     
 
-    var sampleDF_1 = new dataForge.DataFrame([
+    var sampleDF_1 = new TidyBlocksDF([
 			{
 				Col1: 1,
 				Col2: 'hello',
