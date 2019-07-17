@@ -45,12 +45,9 @@ Blockly.JavaScript['variable_operation'] = function(block) {
   var operator = (block.getFieldValue('OP') == 'AND') ? '&&' : '||';
       
   var argument0 = Blockly.JavaScript.valueToCode(block, 'A', Blockly.JavaScript.ORDER_NONE);
-  console.log(argument0)
   
   var argument1 = Blockly.JavaScript.valueToCode(block, 'B', Blockly.JavaScript.ORDER_NONE);
-  console.log(argument1)
   
   var code = argument0 + ' ' + operator + ' ' + argument1;
-  console.log(code)
   return [code, order];
 };

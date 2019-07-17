@@ -21,7 +21,7 @@ Blockly.JavaScript['dplyr_filter'] = function(block) {
 
 
 
-Blockly.JavaScript['dplyr_groupby'] = function(block) {
+Blockly.JavaScript['dplyr_groupby2'] = function(block) {
 
   var argument0 = Blockly.JavaScript.valueToCode(block, 'Columns',
       Blockly.JavaScript.ORDER_NONE);
@@ -33,13 +33,18 @@ Blockly.JavaScript['dplyr_groupby'] = function(block) {
   return groupbyString
 };
 
-Blockly.JavaScript['dplyr_groupby2'] = function(block) {
+Blockly.JavaScript['dplyr_groupby'] = function(block) {
 
   var argument0 = Blockly.JavaScript.valueToCode(block, 'Columns',
       Blockly.JavaScript.ORDER_NONE);
 
-    var groupString = `.MyGroupBy(${argument0})`
-	 
+    var groupString = 
+    `.generateSeries({
+      Index: row => {
+        return ${argument0};
+      }
+    }).orderBy(column => column.Index);`
+    groupString = groupString.replace(/&&/gi, "+")
 	console.log(groupString)
   return groupString
 };
@@ -77,35 +82,23 @@ Blockly.JavaScript['dplyr_mutate'] = function(block) {
  return mutateString
 };
 
-
-Blockly.JavaScript['dplyr_summarise'] = function(block) {
-  
-  // need an if else -- if just one summary stat use 
-  var argument0 =  Blockly.JavaScript.valueToCode(block, 'Columns', Blockly.JavaScript.ORDER_NONE);
-  // otherwise if in an and statement use
-  
-
-  var summariseString = `.select(group => { return { Species: group.first().Species,
-  										 ${argument0},
-                      }}).inflate()`
-                      //.getSeries("Sepal_Length").average());
-  summariseString = summariseString.replace(/["']/g, "")
-  summariseString = summariseString.replace(/&&/g, ",")
-  console.log(summariseString)
-  return summariseString
-  
-};
-
 Blockly.JavaScript['dplyr_summarise2'] = function(block) {
    
   var argument0 =  Blockly.JavaScript.valueToCode(block, 'Columns', Blockly.JavaScript.ORDER_NONE);
 
     var previous = this.getPreviousBlock();
     var inputBlock = previous.getInputTargetBlock('Columns');
-  
-    var summariseString = `.select(group => { return { ${inputBlock}: group.first().${inputBlock},
-      ${argument0},
-     }}).inflate()`
+    console.log(inputBlock)
+
+    var summariseString = 
+     `.groupBy(row => [row.Index])
+    .select(group => {
+        return {
+            Index: group.first().Index,
+            ${argument0},
+        }
+    }).inflate()`
+
 summariseString = summariseString.replace(/["']/g, "")
 summariseString = summariseString.replace(/&&/g, ",")
 console.log(summariseString)
@@ -113,3 +106,32 @@ return summariseString
   
 };
 
+
+Blockly.JavaScript['dplyr_summarise'] = function(block) {
+   
+  var argument0 =  Blockly.JavaScript.valueToCode(block, 'Columns', Blockly.JavaScript.ORDER_NONE);
+
+  // grab the columns we want to pivot by from the group by block
+  
+  // get the previous block
+    var previous = this.getPreviousBlock();
+    // get the field from the previous block containing the columns
+    var inputBlock = previous.getInputTargetBlock('Columns');
+    // turn to string
+    inputBlock = `${inputBlock}`
+    // this returns Column AND Column
+    // we need to change that to "Column", "Column"
+    inputBlock = "\"" + inputBlock.split(' ').join().replace(/,/g, "\"").replace(/AND/g, ",") + "\""
+    console.log(inputBlock)
+
+    var summariseString = 
+     `.dropSeries("Index")
+     .pivot([${inputBlock}]), {
+        Sepal_Width: {Sum: series => series.sum()}
+     })`
+    
+summariseString = summariseString.replace(/AND/g, ",")
+console.log(summariseString)
+return summariseString
+  
+};

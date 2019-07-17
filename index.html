@@ -181,8 +181,6 @@ button {
     </block>
     
     <block type="dplyr_summarise"></block>
-    <block type="dplyr_summarise2"></block>
-    <block type="dplyr_groupby2"></block>
     
   </category>
   
@@ -244,6 +242,8 @@ button {
 
   class TidyBlocksDF extends dataForge.DataFrame {
   }
+
+  let getProperty = prop => row => row[prop];
 
 	var blocklyArea = document.getElementById('blocklyArea');
     var blocklyDiv = document.getElementById('blocklyDiv');
