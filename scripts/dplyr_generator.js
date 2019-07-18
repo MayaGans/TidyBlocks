@@ -43,7 +43,7 @@ Blockly.JavaScript['dplyr_groupby'] = function(block) {
       Index: row => {
         return ${argument0};
       }
-    }).orderBy(column => column.Index);`
+    }).orderBy(column => column.Index)`
     groupString = groupString.replace(/&&/gi, "+")
 	console.log(groupString)
   return groupString
@@ -82,7 +82,7 @@ Blockly.JavaScript['dplyr_mutate'] = function(block) {
  return mutateString
 };
 
-Blockly.JavaScript['dplyr_summarise2'] = function(block) {
+Blockly.JavaScript['dplyr_summarise3'] = function(block) {
    
   var argument0 =  Blockly.JavaScript.valueToCode(block, 'Columns', Blockly.JavaScript.ORDER_NONE);
 
@@ -110,7 +110,17 @@ return summariseString
 Blockly.JavaScript['dplyr_summarise'] = function(block) {
    
   var argument0 =  Blockly.JavaScript.valueToCode(block, 'Columns', Blockly.JavaScript.ORDER_NONE);
-
+  var argarray = argument0.split("&&")
+  arg2 = eval(argarray)
+  console.log(arg2)
+  
+  argument1 = 
+  `${arg2}`,
+  argarray.reduce((r, o) => {
+    Object.entries(o).forEach(([k, v]) => Object.assign(r[k] = r[k] || {}, v));
+    return r;
+}, {});
+console.log(argument1)
   // grab the columns we want to pivot by from the group by block
   
   // get the previous block
@@ -126,11 +136,61 @@ Blockly.JavaScript['dplyr_summarise'] = function(block) {
 
     var summariseString = 
      `.dropSeries("Index")
-     .pivot([${inputBlock}]), {
-        Sepal_Width: {Sum: series => series.sum()}
+     .pivot([${inputBlock}],
+        ${argument1},
+     )`
+
+summariseString = summariseString.replace(/AND/g, ",").replace(/&&/g, ",")
+summariseString = summariseString.replace("} , {", ",")
+console.log(summariseString)
+return summariseString
+  
+};
+
+
+Blockly.JavaScript['dplyr_summarise3'] = function(block) {
+   
+  var argument0 =  Blockly.JavaScript.valueToCode(block, 'Columns', Blockly.JavaScript.ORDER_NONE);
+
+  // grab the columns we want to pivot by from the group by block
+  
+  // get the previous block
+    var previous = this.getPreviousBlock();
+    // get the field from the previous block containing the columns
+    var inputBlock = previous.getInputTargetBlock('Columns');
+    // turn to string
+    inputBlock = `${inputBlock}`
+    // this returns Column AND Column
+    // we need to change that to "Column", "Column"
+    inputBlock = "\"" + inputBlock.split(' ').join().replace(/,/g, "\"").replace(/AND/g, ",") + "\""
+    console.log(inputBlock)
+
+   
+  // INSIDE PIVOT FUNCTION 
+
+    // LOOK FOR AND BLOCK
+    var attachedBlock = this.getInputTargetBlock("Columns");
+    var isAttachedBlockAnAnd = attachedBlock.type == "variable_operation"; // is it an and block?
+    while (isAttachedBlockAnAnd) { // We have an and
+        attachedBlock = attachedBlock.getInputTargetBlock("my_and_block_left_value_input"); // grab the left input
+        isAttachedBlockAnAnd = attachedBlock.type == "variable_operation"; // is it an and block?
+    }
+
+  // attachedBlock is a purple block.
+  var purpleBlockCode = valueToCode(attachedBlock);
+
+  var argumentBlock = attachedBlock.getInputTargetBlock("median/avg/whatever_value_input");
+
+  var argCode = Blockly.JavaScript.valuetoCode(argumentBlock, 'Columns', Blockly.JavaScript.ORDER_NONE);
+
+    var summariseString = 
+     `.dropSeries("Index")
+     .pivot([${inputBlock}], {
+        ${argCode} : {
+          ${purpleBlockCode}
+        }
      })`
     
-summariseString = summariseString.replace(/AND/g, ",")
 console.log(summariseString)
 return summariseString
   

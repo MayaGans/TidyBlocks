@@ -9,7 +9,7 @@ Blockly.JavaScript['stats_mean'] = function(block) {
   var argument0 = Blockly.JavaScript.valueToCode(block, 'Columns', Blockly.JavaScript.ORDER_NONE);
       argument0 = argument0.replace("row.", "")
 	
-	var code = `Average_${argument0}: group.deflate(row => row.${argument0}).average()`
+  var code = `{ ${argument0}: {Average_${argument0}: series => series.average() }}`
     return [code, order];
 };
 
@@ -20,7 +20,7 @@ Blockly.JavaScript['stats_sd'] = function(block) {
   var argument0 = Blockly.JavaScript.valueToCode(block, 'Columns', Blockly.JavaScript.ORDER_NONE);
       argument0 = argument0.replace("row.", "")
 	
-	var code = `SD_${argument0}: group.deflate(row => row.${argument0}).std()`
+  var code = `{ ${argument0}: {SD_${argument0}: series => series.std() }}`
     return [code, order];
 };
 
