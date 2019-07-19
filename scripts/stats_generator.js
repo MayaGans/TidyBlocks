@@ -30,7 +30,7 @@ Blockly.JavaScript['stats_sum'] = function(block) {
   var argument0 = Blockly.JavaScript.valueToCode(block, 'Columns', Blockly.JavaScript.ORDER_NONE);
       argument0 = argument0.replace("row.", "")
 	
-	var code = `Sum_${argument0}: group.deflate(row => row.${argument0}).sum()`
+  var code = `{Sum_${argument0}: series => series.sum() }}`
     return [code, order];
 };
 
@@ -41,7 +41,7 @@ Blockly.JavaScript['stats_median'] = function(block) {
   var argument0 = Blockly.JavaScript.valueToCode(block, 'Columns', Blockly.JavaScript.ORDER_NONE);
       argument0 = argument0.replace("row.", "")
 	
-	var code = `Median_${argument0}: group.deflate(row => row.${argument0}).median()`
+	var code = `{Median_${argument0}: series => series.median() }}`
     return [code, order];
 };
 
@@ -51,7 +51,7 @@ Blockly.JavaScript['stats_min'] = function(block) {
   var argument0 = Blockly.JavaScript.valueToCode(block, 'Columns', Blockly.JavaScript.ORDER_NONE);
       argument0 = argument0.replace("row.", "")
 	
-	var code = `Min_${argument0}: group.deflate(row => row.${argument0}).min()`
+	var code = `{Min_${argument0}: series => series.min() }}`
     return [code, order];
 };
 
@@ -61,7 +61,7 @@ Blockly.JavaScript['stats_max'] = function(block) {
   var argument0 = Blockly.JavaScript.valueToCode(block, 'Columns', Blockly.JavaScript.ORDER_NONE);
       argument0 = argument0.replace("row.", "")
 	
-	var code = `Max_${argument0}: group.deflate(row => row.${argument0}).max()`
+	var code = `{Max_${argument0}: series => series.max() }}`
     return [code, order]; 
 };
 
