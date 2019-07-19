@@ -111,18 +111,47 @@ Blockly.JavaScript['dplyr_summarise'] = function(block) {
    
   var argument0 =  Blockly.JavaScript.valueToCode(block, 'Columns', Blockly.JavaScript.ORDER_NONE);
   var argarray = argument0.split("&&")
-  arg2 = eval(argarray)
-  console.log(arg2)
+  var evalArray = (eval(argarray))
   
-  argument1 = 
-  `${arg2}`,
-  argarray.reduce((r, o) => {
-    Object.entries(o).forEach(([k, v]) => Object.assign(r[k] = r[k] || {}, v));
-    return r;
-}, {});
-console.log(argument1)
-  // grab the columns we want to pivot by from the group by block
+
+  function deserialize(serializedJavascript){
+    return eval('(' + serializedJavascript + ')');
+  }
   
+  let blocklyX = evalArray.map(n=>{
+      return deserialize(n);
+  });
+  
+  blocklyX,
+      result2 = blocklyX.reduce((r, o) => {
+          Object.entries(o).forEach(([k, v]) => Object.assign(r[k] = r[k] || {}, v));
+          return r;
+      }, {});
+
+  function reviveJS(obj) {
+    return JSON.parse(JSON.stringify(obj, function (k, v) {
+      if (typeof v === 'function') {
+        return '' + v;
+      }
+      return v;
+    }), function (k, v) {
+      if (typeof v === 'string' && v.indexOf('') !== -1) {
+        return v;
+      }
+      return v;
+    });
+  }
+  
+  var functionToString = reviveJS(result2)
+  
+  functionToString = JSON.stringify(functionToString)
+  
+  functionToString = functionToString.replace(/"/g, "").replace(/[[\]]/g,'')
+  console.log(functionToString)
+
+  //////////////////////////////
+  /////////////////////////////
+
   // get the previous block
     var previous = this.getPreviousBlock();
     // get the field from the previous block containing the columns
@@ -132,12 +161,11 @@ console.log(argument1)
     // this returns Column AND Column
     // we need to change that to "Column", "Column"
     inputBlock = "\"" + inputBlock.split(' ').join().replace(/,/g, "\"").replace(/AND/g, ",") + "\""
-    console.log(inputBlock)
 
     var summariseString = 
      `.dropSeries("Index")
      .pivot([${inputBlock}],
-        ${argument1},
+        ${functionToString},
      )`
 
 summariseString = summariseString.replace(/AND/g, ",").replace(/&&/g, ",")
