@@ -81,6 +81,9 @@ Blockly.JavaScript['ggplot_bar'] = function(block) {
     var argument1 =  Blockly.JavaScript.valueToCode(block, 'Y', Blockly.JavaScript.ORDER_NONE);
     argument1 = argument1.replace(/row./gi, "")
 
+    var argument2 = Blockly.JavaScript.valueToCode(block, 'color', Blockly.JavaScript.ORDER_NONE);
+    argument2 = argument2.replace(/row./gi, "")
+
     var bar = `SPLIT 
     let spec = {
       "width": 700,
@@ -88,7 +91,8 @@ Blockly.JavaScript['ggplot_bar'] = function(block) {
       "mark": "point",
       "encoding": {
         "x": {"field": "${argument0}","type": "quantitative"},
-        "y": {"field": "${argument1}","type": "quantitative"}
+        "y": {"field": "${argument1}","type": "quantitative"},
+        "color": {"field": "${argument2}", "type": "nominal"}
       }
     }
     vegaEmbed("#plotOutput", spec, {})`

@@ -66,7 +66,7 @@
 },
 {
   "type": "ggplot_scatter",
-  "message0": "POINT %1 %2 %3 %4 %5",
+  "message0": "POINT %1 %2 %3 %4 %5 %6 %7",
   "args0": [
     {
       "type": "input_dummy"
@@ -88,6 +88,15 @@
     {
       "type": "input_value",
       "name": "Y"
+    },
+    {
+      "type": "field_input",
+      "name": "color",
+      "text": "color"
+    },
+    {
+      "type": "input_value",
+      "name": "color"
     }
   ],
   "inputsInline": true,
