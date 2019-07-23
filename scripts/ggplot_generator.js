@@ -83,20 +83,123 @@ Blockly.JavaScript['ggplot_bar'] = function(block) {
 
     var argument2 = Blockly.JavaScript.valueToCode(block, 'color', Blockly.JavaScript.ORDER_NONE);
     argument2 = argument2.replace(/row./gi, "")
+    
+    var bar = []
 
-    var bar = `SPLIT 
+    if (block.getFieldValue('lm') == 'FALSE') {
+      bar = `SPLIT 
+      let spec = {
+        "width": 700,
+        "data": { "values": dfArray },
+        "mark": "point",
+        "encoding": {
+          "x": {"field": "${argument0}","type": "quantitative"},
+          "y": {"field": "${argument1}","type": "quantitative"},
+          "color": {"field": "${argument2}", "type": "nominal"}
+        }
+      }
+      vegaEmbed("#plotOutput", spec, {})`
+  
+     console.log(bar)
+     return bar
+     
+  } else {
+  
+  bar = `SPLIT
+    var result = dfArray.reduce(function(obj, current) { //Reduce the array to an object
+      Object.keys(current).forEach(function(key) { //Each key
+          obj[key] = obj[key] || []; //Has to be an array if not exists
+          obj[key] = Array.isArray(obj[key]) ? obj[key] : [obj[key]]; //Has to be an array if not an array
+          obj[key].push(current[key]); //Add current item to array of matching key
+      });
+      return obj; //Continue to the next object in the array
+  });
+  
+  function findLineByLeastSquares(values_x, values_y) {
+      var x_sum = 0;
+      var y_sum = 0;
+      var xy_sum = 0;
+      var xx_sum = 0;
+      var count = 0;
+  
+      /*
+       * The above is just for quick access, makes the program faster
+       */
+      var x = 0;
+      var y = 0;
+      var values_length = values_x.length;
+  
+      if (values_length != values_y.length) {
+          throw new Error('The parameters values_x and values_y need to have same size!');
+      }
+  
+      /*
+       * Above and below cover edge cases
+       */
+      if (values_length === 0) {
+          return [ [], [] ];
+      }
+  
+      /*
+       * Calculate the sum for each of the parts necessary.
+       */
+      for (let i = 0; i< values_length; i++) {
+          x = values_x[i];
+          y = values_y[i];
+          x_sum+= x;
+          y_sum+= y;
+          xx_sum += x*x;
+          xy_sum += x*y;
+          count++;
+      }
+  
+      /*
+       * Calculate m and b for the line equation:
+       * y = x * m + b
+       */
+      var m = (count*xy_sum - x_sum*y_sum) / (count*xx_sum - x_sum*x_sum);
+      var b = (y_sum/count) - (m*x_sum)/count;
+  
+      // solve for x and y intercept
+      return [m, b]
+  }
+  
+  const lineDat = findLineByLeastSquares(result.${argument0}, result.${argument1})
+
     let spec = {
       "width": 700,
-      "data": { "values": dfArray },
-      "mark": "point",
-      "encoding": {
-        "x": {"field": "${argument0}","type": "quantitative"},
-        "y": {"field": "${argument1}","type": "quantitative"},
-        "color": {"field": "${argument2}", "type": "nominal"}
-      }
+      "layer": [
+      { 
+         "data": { "values": dfArray },
+          "mark": "point",
+          "encoding": {
+            "x": {"field": "${argument0}","type": "quantitative"},
+            "y": {"field": "${argument1}","type": "quantitative"},
+            "color": {"field": "${argument2}", "type": "nominal"}
+          }
+      },
+        {
+          "data": {
+            "values": [
+              {"x": 0, "y": lineDat[1]},
+              {"x": Math.max.apply(Math, result.${argument0}), 
+              "y": (Math.max.apply(Math, result.${argument0}))*lineDat[0]+lineDat[1]}
+            ]
+          },
+          "mark": {"type": "line"},
+          "encoding": {
+            "x": {"type": "quantitative", "field": "x"},
+            "y": {"type": "quantitative", "field": "y"},
+            "color": {"value": "red"}
+          }
+        }
+      ]
     }
+    
     vegaEmbed("#plotOutput", spec, {})`
-   console.log(bar)
-  return bar
-  };
 
+  console.log(bar)
+  return bar
+
+  }
+}

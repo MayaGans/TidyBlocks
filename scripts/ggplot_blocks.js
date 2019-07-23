@@ -66,7 +66,7 @@
 },
 {
   "type": "ggplot_scatter",
-  "message0": "POINT %1 %2 %3 %4 %5 %6 %7",
+  "message0": "POINT %1 %2 %3 %4 %5 %6 %7 lm %8",
   "args0": [
     {
       "type": "input_dummy"
@@ -97,6 +97,11 @@
     {
       "type": "input_value",
       "name": "color"
+    },
+    {
+      "type": "field_checkbox",
+      "name": "lm",
+      "checked": false
     }
   ],
   "inputsInline": true,

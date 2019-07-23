@@ -163,8 +163,7 @@ Blockly.JavaScript['dplyr_summarise'] = function(block) {
     inputBlock = "\"" + inputBlock.split(' ').join().replace(/,/g, "\"").replace(/AND/g, ",") + "\""
 
     var summariseString = 
-     `.dropSeries("Index")
-     .pivot([${inputBlock}],
+     `.pivot([${inputBlock}],
         ${functionToString},
      )`
 
