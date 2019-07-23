@@ -1,0 +1,22 @@
+[Opening Slide]
+
+Hello, my name is Maya Gans and I’m very excited to introduce RStudio’s TidyBlocks
+
+[Block-based vs Text-based slide]
+Blocks based coding environments are gaining popularity for introducing novices to the practices of programming. Studies have shown block-based coding programs allow the user to focus on requisite foundational concepts such as variables, loops, and expressions in a fun way, without struggling with syntax. 
+
+[Graph from Weintrop and Wilensky]
+Students have been shown to be more successful and interested in coding when introduced through a block-based language such as Scratch or Snap! over a text-based language, but these two block environments were not created with the intention of modifying scalar variables or aggregate operations. As such, these languages leave people who have no programming background but want to explore and transform data with spreadsheets as their only option.
+
+[Tidyverse vs TidyBlocks same operation]
+The Tidyverse provides an alternative grammar to base R functions in a predictable, and more consistent fashion. Data can be imported and transformed by leveraging verbs like filter, select, and summarise and functions can be strung together using pipes. Because pipes can be translated to mean ‘and then’, they were the main motivators behind creating a blocks-based version of the Tidyverse. Blocks of various Tidyverse functions can be dragged and connected with pipes as logical breaks between blocks.
+
+
+I’d like to display a short demo. Navigating to the raw csv file on github, I can import a CSV from the web into our application. I can hit run and a data table is displayed, where I can inspect the imported file. The toolbox is divided into categories, one of which are dplyr functions. We can filter the dataset like so. We can also nest arguments using logic blocks to filter based on multiple arguments. Again, we hit run and see that our transformation has occurred. Two of the most commonly applied functions in the Tidyverse are the groupBy and summarize functions. When we groupBy a variable like FIXME, an indexing column is created in the dataset to show to user what their grouping by. We can then perform summary statistics on the data like calculate its mean and standard deviation. 
+
+[Refresh page]
+
+Other block functions such as select allow us to subset the columns within our data, and with the mutate block we can create or modify columns like so. Once we have manipulated our data we can explore it visually with our blocks that have adopted the ggplot syntax. Choosing our x and y variables we can create a box and whisper plot [display], bar chart, or scatterplot. Mimicking ggplot’s ability to add a smoothing function, we can also add a regression line to our plot by clicking the linear model check box. 
+
+[Back to slide, maybe of different graphs and pipeline visuals]
+A blocks mode within RStudio would allow for meaningful data analysis in a familiar and intuitive environment, without any syntactic distractions. And if integrated with RStudio, the user will be able to toggle between blocks-based and text-based coding. As such, TidyBlocks can be used as a tool for data transformation in itself, or as a ramp to learning how to program. 
