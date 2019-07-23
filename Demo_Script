@@ -22,7 +22,7 @@ and functions can be strung together using pipes. Because pipes can be translate
 they were the main motivators behind creating a blocks-based version of the Tidyverse. 
 Blocks of various Tidyverse functions can be dragged and connected with pipes as logical breaks between blocks.
 
-
+[Open TidyBlocks]
 I’d like to display a short demo. 
 Navigating to the raw csv file on github, 
 I can import a CSV from the web into our application. 
