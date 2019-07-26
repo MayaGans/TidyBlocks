@@ -1,4 +1,4 @@
-iso3,Country/areas,year,Total ,age 15-17,age 18-19,age less than 20,age more than 20,age 20-34,age 35-49,Source,Source year,,
+iso3,Country,year,Total ,age15-17,age18-19,ageLT20,ageMT20,age20-34,age35-49,Source,Source year,,
 AFG,Afghanistan,2010, 	4 , 	5 , 	3 , 	3 , 	3 , 	3 , 	4 ,MICS,2010,,
 ALB,Albania,2008, 	18 , 	23 , 	10 , 	14 , 	19 , 	19 , 	18 ,DHS,2008,,
 ARG,Argentina,2012, 	43 , 	21 , 	35 , 	29 , 	45 , 	44 , 	50 ,MICS,2012,,
