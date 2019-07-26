@@ -44,5 +44,6 @@ Blockly.defineBlocksWithJsonArray([
   "tooltip": "",
   "helpUrl": "",
    "colour": "#FEBE4C"
-},
+}
+
 ]);
